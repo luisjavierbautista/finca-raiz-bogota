@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-05",
+ "actualizado": "2026-09-06",
  "destinos": [
   {
    "clave": "tiempo",
@@ -6301,6 +6301,54 @@
     "min": 16,
     "min_libre": 13,
     "km": 5.1
+   }
+  },
+  "4.6841|-74.0997": {
+   "tiempo": {
+    "min": 19,
+    "min_libre": 15,
+    "km": 5.8
+   },
+   "familia": {
+    "min": 32,
+    "min_libre": 18,
+    "km": 8.9
+   }
+  },
+  "4.6845|-74.1048": {
+   "tiempo": {
+    "min": 20,
+    "min_libre": 16,
+    "km": 7.1
+   },
+   "familia": {
+    "min": 32,
+    "min_libre": 19,
+    "km": 9.0
+   }
+  },
+  "4.6132|-74.1521": {
+   "tiempo": {
+    "min": 35,
+    "min_libre": 27,
+    "km": 10.6
+   },
+   "familia": {
+    "min": 11,
+    "min_libre": 10,
+    "km": 2.5
+   }
+  },
+  "4.6231|-74.1251": {
+   "tiempo": {
+    "min": 22,
+    "min_libre": 16,
+    "km": 6.0
+   },
+   "familia": {
+    "min": 13,
+    "min_libre": 11,
+    "km": 3.0
    }
   }
  }
