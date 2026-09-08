@@ -397,12 +397,12 @@
   <ul class="grid" id="grid"></ul>
 
 <section class="block" id="bloque-favs" hidden>
-    <h2>Tus marcados</h2>
+    <h2>Tus marcados <span id="favs-cuenta"></span></h2>
     <p class="lede">
-      Los que anotaste en <code>favoritos.txt</code> y hoy no están en la lista de arriba.
-      Cada uno se consultó directamente en su portal, porque no aparecer en el barrido no
-      significa que se haya caído: los buscadores de los portales a veces no devuelven un
-      aviso que sigue publicado.
+      Todos los que anotaste en <code>favoritos.txt</code>, en el mismo orden, con el estado
+      de hoy. Los que el barrido no está mostrando se consultaron directamente en su portal,
+      porque no aparecer en la lista no significa que se hayan caído: los buscadores de los
+      portales a veces no devuelven un aviso que sigue publicado.
     </p>
     <ul class="favs" id="favs-body"></ul>
   </section>
@@ -3981,6 +3981,8 @@
     if (m && m._icon) { var s = m._icon.querySelector(".pin"); if (s) s.classList.add("on"); }
   }
 
+  window.markPin = markPin;
+
   function drawLeaflet(rows) {
     markerLayer.clearLayers();
     pinById = {};
@@ -4173,23 +4175,37 @@
 var favsBox = document.getElementById("favs-body");
   if (favsBox && FAVS.length) {
     document.getElementById("bloque-favs").hidden = false;
+    document.getElementById("favs-cuenta").textContent =
+      "· " + FAVS.filter(function (f) { return f.estado !== "caido"; }).length +
+      " de " + FAVS.length + " siguen publicados";
     FAVS.forEach(function (f) {
       var li = document.createElement("li");
-      var sello = f.estado === "publicado" ? '<span class="sello vivo">sigue publicado</span>'
+      var sello = f.estado === "en_lista" ? '<span class="sello vivo">en la lista</span>'
+                : f.estado === "publicado" ? '<span class="sello vivo">sigue publicado</span>'
                 : f.estado === "caido" ? '<span class="sello muerto">se cayó</span>'
                 : '<span class="sello duda">no se pudo leer</span>';
       var datos = [];
       if (f.total) datos.push(cop(f.total));
       if (f.m2) datos.push(nice(f.m2) + " m²");
       if (f.hab) datos.push(f.hab + " hab");
-      if (f.visto) datos.push("visto por última vez el " + f.visto);
+      // «visto por última vez» solo tiene sentido si hoy ya no está.
+      if (f.visto && f.estado !== "en_lista") datos.push("visto por última vez el " + f.visto);
       li.innerHTML = sello +
         '<span class="qué">' + (f.barrio || "sin barrio") + "</span>" +
         '<span class="dato">' + datos.join(" · ") + (f.portal ? " · " + f.portal : "") + "</span>" +
+        (f.ficha ? '<a class="go" href="#" data-ficha="' + f.ficha + '">Ver ficha ↓</a> ' : "") +
         '<a class="go" href="' + f.url + '" target="_blank" rel="noopener noreferrer">Abrir →</a>';
       favsBox.appendChild(li);
     });
   }
+
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("[data-ficha]") : null;
+    if (!a) return;
+    e.preventDefault();
+    focusCard(a.getAttribute("data-ficha"));
+    if (window.markPin) markPin(a.getAttribute("data-ficha"));
+  });
 
   var gb = document.getElementById("gone-body");
   GONE.forEach(function (r) {

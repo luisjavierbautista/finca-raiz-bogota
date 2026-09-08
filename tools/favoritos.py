@@ -80,7 +80,7 @@ def resolver(avisos, fecha, busqueda=None):
     for a in avisos:
         porsitio.setdefault("%.4f|%.4f|%d" % (a["lat"], a["lon"], int(a["m2"])), a)
 
-    vigentes, perdidos = set(), []
+    vigentes, orden = set(), []
     for url in lista(busqueda):
         k = clave(url)
         a = porclave.get(k)
@@ -94,14 +94,17 @@ def resolver(avisos, fecha, busqueda=None):
                           "m2": a["m2"], "src": a["src"], "visto": fecha,
                           "sitio": "%.4f|%.4f|%d" % (a["lat"], a["lon"], int(a["m2"])),
                           "vigente_como": a["url"]}
-        elif recuerdo:
-            perdidos.append(dict(recuerdo, url=url))
+            orden.append({"url": url, "estado": "en_lista", "ficha": a["url"],
+                          "barrio": a["barrio"], "total": a.get("total"), "m2": a["m2"],
+                          "hab": a.get("hab"), "portal": a["src"], "visto": fecha})
         else:
-            # Marcado que nunca estuvo en la lista: o está fuera de criterios, o ya
-            # no se publica. No se inventa una ficha para él.
-            perdidos.append({"url": url, "barrio": None, "total": None, "m2": None,
-                             "src": None, "visto": None})
-    return vigentes, perdidos, memoria
+            # No está en el barrido. Puede haberse caído o puede seguir publicado y
+            # que el buscador del portal no lo devuelva: eso lo decide `consultar`.
+            base = dict(recuerdo or {}, url=url)
+            base["estado"] = "por_consultar"
+            base.setdefault("visto", None)
+            orden.append(base)
+    return vigentes, orden, memoria
 
 
 # ─────────────────────────────────────────────────────────────────────────────

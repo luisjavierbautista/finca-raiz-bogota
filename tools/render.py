@@ -249,13 +249,14 @@ def bloque_datos(cfg, avisos, nuevos, marcados):
 
 
 def bloque_marcados(fuera):
-    """Los que marcaste a mano y el barrido no está mostrando, con su estado real."""
+    """Todos los marcados a mano, con su estado real, en el orden del archivo."""
     g = ["  var FAVS = ["]
     for f in fuera:
-        g.append('    {url:%s, portal:%s, barrio:%s, estado:%s, total:%s, m2:%s, hab:%s, visto:%s},'
-                 % (js(f["url"]), js(f.get("portal")), js(f.get("barrio")),
+        g.append('    {url:%s, portal:%s, barrio:%s, estado:%s, total:%s, m2:%s, hab:%s, '
+                 'visto:%s, ficha:%s},'
+                 % (js(f["url"]), js(f.get("portal") or f.get("src")), js(f.get("barrio")),
                     js(f.get("estado")), js(f.get("total")), js(f.get("m2")),
-                    js(f.get("hab")), js(f.get("visto"))))
+                    js(f.get("hab")), js(f.get("visto")), js(f.get("ficha"))))
     if len(g) > 1:
         g[-1] = g[-1][:-1]
     g.append("  ];")
@@ -386,12 +387,19 @@ def main():
 
     # Marcados a mano. Los que el barrido no ve se consultan en su portal: puede
     # que sigan publicados y que el buscador del portal simplemente no los devuelva.
-    marcados, sueltos, memoria = favoritos.resolver(avisos, gen, cfg["id"])
-    fuera = []
-    for f in sueltos[:12]:
+    marcados, orden, memoria = favoritos.resolver(avisos, gen, cfg["id"])
+    fuera, consultas = [], 0
+    for f in orden:
+        if f["estado"] != "por_consultar":
+            fuera.append(f)
+            continue
+        if consultas >= 12:            # tope por corrida, para no colgarse
+            fuera.append(dict(f, estado="ilegible"))
+            continue
+        consultas += 1
         info = favoritos.consultar(f["url"], comun.get)
         info["visto"] = f.get("visto")
-        for k in ("barrio", "total", "m2"):
+        for k in ("barrio", "total", "m2", "hab"):
             if info.get(k) is None and f.get(k) is not None:
                 info[k] = f[k]
         fuera.append(info)
