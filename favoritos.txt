@@ -1,0 +1,16 @@
+# Los que te interesan. Pega la URL completa del portal, una por línea.
+# Se marcan con una estrella en la ficha y con el pin resaltado en el mapa;
+# no filtran nada por sí solos (hay un chip «Solo marcados» si los quieres ver aparte).
+#
+# Si uno se cae de los portales, no desaparece de la página: pasa a la sección
+# «Marcados que ya no están», con lo último que se supo de él.
+#
+# Las líneas que empiezan con # se ignoran. El barrido no toca este archivo.
+
+# ── norte ──────────────────────────────────────────────────────────────────
+https://www.ciencuadras.com/inmueble/apartamento-en-arriendo-en-niza-norte-bogota-3799709
+https://www.ciencuadras.com/inmueble/apartamento-en-arriendo-en-bella-suiza-bogota-3159354
+https://www.fincaraiz.com.co/apartamento-en-arriendo-en-atabanza-bogota/194077537
+https://www.metrocuadrado.com/inmueble/arriendo-apartamento-bogota-iberia-3-habitaciones-3-banos-2-garajes/11139-M6997038
+https://www.fincaraiz.com.co/apartamento-en-arriendo-en-colina-campestre-bogota/193832290
+https://www.fincaraiz.com.co/apartamento-en-arriendo-en-colina-campestre-bogota/10786125

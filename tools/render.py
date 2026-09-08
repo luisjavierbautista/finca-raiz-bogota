@@ -16,6 +16,7 @@ import io, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import comun
+import favoritos
 from barrios import limpia_barrio
 from comun import clave_edificio, ruta
 
@@ -210,7 +211,7 @@ def cargar_cache(cfg, cual):
     return json.load(io.open(p, encoding="utf-8")).get("edificios", {})
 
 
-def bloque_datos(cfg, avisos, nuevos):
+def bloque_datos(cfg, avisos, nuevos, marcados):
     frec = cfg["frecuencia"]
     out = ["  var DATA = ["]
     for a in avisos:
@@ -237,12 +238,28 @@ def bloque_datos(cfg, avisos, nuevos):
             out.append("      sv:false,")
         if a["url"] in nuevos:
             out.append("      nuevo:true,")
+        if a["url"] in marcados:
+            out.append("      fav:true,")
         out.append('      note:%s,' % js(nota(a)))
         out.append('      flags:[%s] },' % fl)
     if len(out) > 1:
         out[-1] = out[-1][:-1]
     out.append("  ];")
     return "\n".join(out)
+
+
+def bloque_marcados(fuera):
+    """Los que marcaste a mano y el barrido no está mostrando, con su estado real."""
+    g = ["  var FAVS = ["]
+    for f in fuera:
+        g.append('    {url:%s, portal:%s, barrio:%s, estado:%s, total:%s, m2:%s, hab:%s, visto:%s},'
+                 % (js(f["url"]), js(f.get("portal")), js(f.get("barrio")),
+                    js(f.get("estado")), js(f.get("total")), js(f.get("m2")),
+                    js(f.get("hab")), js(f.get("visto"))))
+    if len(g) > 1:
+        g[-1] = g[-1][:-1]
+    g.append("  ];")
+    return "\n".join(g)
 
 
 def bloque_caidos(cfg, caidos):
@@ -367,6 +384,19 @@ def main():
     if es_primera:
         nuevos = set()   # marcarlo todo como nuevo no distingue nada
 
+    # Marcados a mano. Los que el barrido no ve se consultan en su portal: puede
+    # que sigan publicados y que el buscador del portal simplemente no los devuelva.
+    marcados, sueltos, memoria = favoritos.resolver(avisos, gen, cfg["id"])
+    fuera = []
+    for f in sueltos[:12]:
+        info = favoritos.consultar(f["url"], comun.get)
+        info["visto"] = f.get("visto")
+        for k in ("barrio", "total", "m2"):
+            if info.get(k) is None and f.get(k) is not None:
+                info[k] = f[k]
+        fuera.append(info)
+    favoritos.guardar(memoria, gen)
+
     p = ruta(cfg, "pagina")
     s = io.open(p, encoding="utf-8").read()
 
@@ -387,7 +417,9 @@ def main():
     s = re.sub(r'var CARTO_KEY = "[^"]*";', 'var CARTO_KEY = "%s";' % carto, s, count=1)
     s = re.sub(r'var FECHA_CORRIDA = "[^"]*";', 'var FECHA_CORRIDA = "%s";' % fecha, s, count=1)
 
-    s = swap(s, "  var DATA = [", bloque_datos(cfg, avisos, nuevos))
+    s = swap(s, "  var DATA = [", bloque_datos(cfg, avisos, nuevos, marcados))
+    if "  var FAVS = [" in s:
+        s = swap(s, "  var FAVS = [", bloque_marcados(fuera))
     s = swap(s, "  var GONE = [", bloque_caidos(cfg, caidos))
     s = re.sub(r'  <div class="tiles">.*?\n  </div>', lambda _m: tiles(cfg, avisos, nuevos),
                s, count=1, flags=re.S)

@@ -3570,6 +3570,60 @@
     "min_libre": 28,
     "km": 13.7
    }
+  },
+  "4.6985|-74.0691": {
+   "gimnasio": {
+    "min": 12,
+    "min_libre": 11,
+    "km": 3.7
+   },
+   "musica": {
+    "min": 15,
+    "min_libre": 15,
+    "km": 5.9
+   },
+   "teatro": {
+    "min": 8,
+    "min_libre": 7,
+    "km": 1.7
+   },
+   "colegio": {
+    "min": 26,
+    "min_libre": 24,
+    "km": 14.0
+   },
+   "oficina": {
+    "min": 26,
+    "min_libre": 22,
+    "km": 8.5
+   }
+  },
+  "4.7087|-74.0620": {
+   "gimnasio": {
+    "min": 15,
+    "min_libre": 12,
+    "km": 4.5
+   },
+   "musica": {
+    "min": 15,
+    "min_libre": 15,
+    "km": 6.5
+   },
+   "teatro": {
+    "min": 13,
+    "min_libre": 10,
+    "km": 4.1
+   },
+   "colegio": {
+    "min": 24,
+    "min_libre": 22,
+    "km": 13.1
+   },
+   "oficina": {
+    "min": 31,
+    "min_libre": 24,
+    "km": 10.2
+   }
   }
  }
 }

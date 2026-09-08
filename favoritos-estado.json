@@ -1,0 +1,45 @@
+{
+ "actualizado": "2026-09-08",
+ "marcados": {
+  "/apartamento-en-arriendo-en-colina-campestre-bogota/10786125": {
+   "barrio": "Colina Campestre",
+   "m2": 102.0,
+   "sitio": "4.7310|-74.0608|102",
+   "src": "Fincaraíz",
+   "total": 4000000,
+   "url": "https://www.fincaraiz.com.co/apartamento-en-arriendo-en-colina-campestre-bogota/10786125",
+   "vigente_como": "/apartamento-en-arriendo-en-colina-campestre-bogota/10786125",
+   "visto": "2026-09-08"
+  },
+  "/apartamento-en-arriendo-en-colina-campestre-bogota/193832290": {
+   "barrio": "Colina Campestre",
+   "m2": 125.0,
+   "sitio": "4.7319|-74.0649|125",
+   "src": "Fincaraíz",
+   "total": 4200000,
+   "url": "https://www.fincaraiz.com.co/apartamento-en-arriendo-en-colina-campestre-bogota/193832290",
+   "vigente_como": "/apartamento-en-arriendo-en-colina-campestre-bogota/193832290",
+   "visto": "2026-09-08"
+  },
+  "/inmueble/apartamento-en-arriendo-en-niza-norte-bogota-3799709": {
+   "barrio": "Niza",
+   "m2": 115.0,
+   "sitio": "4.7118|-74.0783|115",
+   "src": "Ciencuadras",
+   "total": 4000000,
+   "url": "https://www.ciencuadras.com/inmueble/apartamento-en-arriendo-en-niza-norte-bogota-3799709",
+   "vigente_como": "/inmueble/apartamento-en-arriendo-en-niza-norte-bogota-3799709",
+   "visto": "2026-09-08"
+  },
+  "/inmueble/arriendo-apartamento-bogota-iberia-3-habitaciones-3-banos-2-garajes/11139-m6997038": {
+   "barrio": "Iberia",
+   "m2": 125.0,
+   "sitio": "4.7178|-74.0640|125",
+   "src": "Metrocuadrado",
+   "total": 4913000,
+   "url": "https://www.metrocuadrado.com/inmueble/arriendo-apartamento-bogota-iberia-3-habitaciones-3-banos-2-garajes/11139-M6997038",
+   "vigente_como": "/inmueble/arriendo-apartamento-bogota-iberia-3-habitaciones-3-banos-2-garajes/11139-M6997038",
+   "visto": "2026-09-08"
+  }
+ }
+}

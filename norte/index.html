@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Busqueda de apartamento en arriendo en el norte de Bogota: 69 candidatos vigentes, con mapa y filtros.">
+<meta name="description" content="Busqueda de apartamento en arriendo en el norte de Bogota: 72 candidatos vigentes, con mapa y filtros.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#127970;</text></svg>">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<title>Arriendo Bogotá norte — 69 candidatos, 8 sep 2026</title>
+<title>Arriendo Bogotá norte — 72 candidatos, 8 sep 2026</title>
 <style>
   :root {
     --paper:#E8EBE8; --surface:#F5F7F4; --surface-2:#DFE4DF; --ink:#141715; --ink-soft:#3A423C;
@@ -166,6 +166,23 @@
   .masbarrios:hover { border-color:var(--accent); }
   .mapbtns { display:flex; gap:8px; align-items:center; margin:0 0 10px; }
   .mapbtns .nota { font-family:var(--sans); font-size:12px; color:var(--muted); }
+  /* Marcados a mano en favoritos.txt: una estrella, no un filtro. */
+  .card.es-fav { box-shadow:inset 3px 0 0 var(--accent); }
+  .estrella { color:var(--accent); font-size:13px; letter-spacing:.04em; font-weight:700;
+              font-family:var(--sans); }
+  .pin.fav { box-shadow:0 0 0 2px var(--accent), 0 1px 3px rgba(0,0,0,.20); }
+  .favs { display:grid; gap:8px; margin:18px 0 0; }
+  .favs li { display:flex; flex-wrap:wrap; align-items:baseline; gap:10px; padding:12px 14px;
+    background:var(--surface); border:1px solid var(--line); border-radius:9px;
+    font-family:var(--sans); font-size:14px; }
+  .favs .qué { font-weight:600; color:var(--ink); }
+  .favs .dato { color:var(--muted); font-size:13px; }
+  .favs .sello { font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+    padding:2px 7px; border-radius:4px; }
+  .favs .sello.vivo { background:var(--ok-bg); color:var(--ok); }
+  .favs .sello.muerto { background:var(--crit-bg); color:var(--crit); }
+  .favs .sello.duda { background:var(--warn-bg); color:var(--warn); }
+  .favs a { margin-left:auto; }
   @media (max-width:640px) { .masthead { padding-top:36px; } .controls { position:static; } .grid { grid-template-columns:1fr; } }
 
   /* ---------- mapa real ---------- */
@@ -283,7 +300,7 @@
   </header>
 
   <div class="tiles">
-    <div class="tile is-key"><div class="n">69</div><div class="l">candidatos vigentes hoy</div></div>
+    <div class="tile is-key"><div class="n">72</div><div class="l">candidatos vigentes hoy</div></div>
     <div class="tile"><div class="n">5</div><div class="l">no estaban en el barrido anterior</div></div>
     <div class="tile"><div class="n">27</div><div class="l">con ascensor confirmado en la ficha</div></div>
     <div class="tile"><div class="n">3h17</div><div class="l">el mejor viaje semanal, solo ida</div></div>
@@ -292,7 +309,7 @@
   <div class="verdict">
     <h2>Qué cambió</h2>
     <p id="auto-resumen">
-      El barrido del 8 sep 2026 deja <strong>69 candidatos vigentes</strong>: 5 que no estaban en la corrida anterior y 11 que se cayeron de los portales. El más económico que entró está en Mónaco: 130 m² por <strong>$3.300.000</strong>. Solo <strong>27 de 69</strong> declaran ascensor en la ficha: el resto quedan marcados como sin confirmar, no como sin ascensor. En tiempos de viaje, el mejor ubicado es <strong>Santa Bárbara</strong>: 20 minutos a Colegio y 24 minutos a Oficina, para un total de 3h17 por semana solo de ida.
+      El barrido del 8 sep 2026 deja <strong>72 candidatos vigentes</strong>: 5 que no estaban en la corrida anterior y 2 que se cayeron de los portales. El más económico que entró está en Morato: 112 m² por <strong>$3.000.000</strong>. Solo <strong>27 de 72</strong> declaran ascensor en la ficha: el resto quedan marcados como sin confirmar, no como sin ascensor. En tiempos de viaje, el mejor ubicado es <strong>Santa Bárbara</strong>: 20 minutos a Colegio y 24 minutos a Oficina, para un total de 3h17 por semana solo de ida.
     </p>
     <p>
       Los portales publican el mismo apartamento con precios y datos distintos, así que cada aviso se deduplica por coordenada y área, no por enlace. La cifra grande de cada ficha es el <strong>costo mensual total</strong>: en Suba la mayoría incluye la administración en el canon y en Usaquén casi siempre va aparte, y compararlos por canon llevaría a escoger mal. Los tiempos de viaje son en carro, con el tráfico previsto por Google para el día y la hora reales de cada compromiso. El del colegio es referencia comparativa entre apartamentos, no el tiempo de la ruta escolar, que recoge a otros niños y depende de cuál les asignen.
@@ -309,6 +326,7 @@
       <button class="chip" type="button" data-toggle="parq2" aria-pressed="false">2+ parqueaderos</button>
       <button class="chip" type="button" data-toggle="lift" aria-pressed="false">Solo ascensor confirmado</button>
       <button class="chip" type="button" data-toggle="soloNuevos" aria-pressed="false">Solo los nuevos</button>
+      <button class="chip" type="button" data-toggle="soloFav" aria-pressed="false">Solo los marcados</button>
       <button class="chip" type="button" data-toggle="near" aria-pressed="false">A menos de 2 km</button>
       <button class="chip" type="button" data-toggle="cole" aria-pressed="false">Colegio ≤ 28 min</button>
       <button class="chip" type="button" data-toggle="ofi" aria-pressed="false">Oficina ≤ 30 min</button>
@@ -366,6 +384,17 @@
 
   <ul class="grid" id="grid"></ul>
 
+<section class="block" id="bloque-favs" hidden>
+    <h2>Tus marcados</h2>
+    <p class="lede">
+      Los que anotaste en <code>favoritos.txt</code> y hoy no están en la lista de arriba.
+      Cada uno se consultó directamente en su portal, porque no aparecer en el barrido no
+      significa que se haya caído: los buscadores de los portales a veces no devuelven un
+      aviso que sigue publicado.
+    </p>
+    <ul class="favs" id="favs-body"></ul>
+  </section>
+
   <section class="block">
     <h2>Se cayeron desde el barrido anterior</h2>
     <p class="lede">
@@ -389,7 +418,7 @@
       hoy no la hay.
     </p>
     <ul class="barrio-list">
-      <li>Recodo del Country</li><li>Nuevo Country</li><li>Portales del Country</li><li>Country</li><li>San Patricio</li><li>La Calleja</li><li>El Recreo de los Frailes</li><li>Malibú</li><li>Las Villas</li><li>Ciudad Jardín Norte</li><li>Casigua</li><li>Córdoba</li><li>La Alborada</li><li>Morato</li><li>Santa Ana Oriental</li>
+      <li>Recodo del Country</li><li>Nuevo Country</li><li>Portales del Country</li><li>Country</li><li>San Patricio</li><li>La Calleja</li><li>El Recreo de los Frailes</li><li>Malibú</li><li>Las Villas</li><li>Ciudad Jardín Norte</li><li>Casigua</li><li>Córdoba</li><li>La Alborada</li><li>Santa Ana Oriental</li>
     </ul>
   </section>
 
@@ -453,23 +482,15 @@
       sv:{f:"2025-01", lat:4.698179, lon:-74.061499},
       note:"100 m² con habitaciones sin dato, 3 baños en Mónaco.",
       flags:[{t:"El aviso no informa la administración.", s:"crit"}] },
-    { op:"arriendo", barrio:"Alhambra", canon:3250000, admin:0, m2:100, hab:3, ban:2, parq:1, dep:null,
-      estrato:"5", piso:null, asc:"si", src:"Fincaraíz", date:"2026-09-01", pub:"Houm", inc:[],
-      lat:4.7009033, lon:-74.0604748, approx:false, url:"/apartamento-en-arriendo-en-alhambra-bogota/194192760", img:"https://cdn2.infocasas.com.uy/repo/img/6a9717e1c5c21_infocdn__5c4655e0-b716-462d-a5cd-65cb1f6ecba2property5c4655e0b716462da5cd65cb1f6ecba2cz0iknr5i0njpg.jpg",
-      dist:{casa:3.02},
-      via:{gimnasio:10,musica:12,teatro:9,colegio:25,oficina:28}, semana:236,
-      sv:{f:"2025-01", lat:4.701047, lon:-74.060486},
-      note:"100 m² con 3 habitaciones, 2 baños, 1 parqueadero en Alhambra.",
-      flags:[{t:"Colegio a 25 minutos, de lo mejor de la lista.", s:"ok"},{t:"Ascensor confirmado en la ficha.", s:"ok"}] },
-    { op:"arriendo", barrio:"Mónaco", canon:3300000, admin:null, m2:130, hab:0, ban:3, parq:0, dep:null,
-      estrato:null, piso:null, asc:"nd", src:"Ciencuadras", date:null, pub:"Ciencuadras", inc:["hab","parq"],
-      lat:4.702015, lon:-74.055282, approx:false, url:"/inmueble/casa-en-arriendo-en-monaco-bogota-3851343", img:"https://www-img-cc.s3.amazonaws.com/inmuebles/images/3851343/affc__178828070569_plana.jpeg",
-      dist:{casa:2.44},
-      via:{gimnasio:11,musica:12,teatro:8,colegio:23,oficina:31}, semana:234,
-      sv:{f:"2024-05", lat:4.701824, lon:-74.05525},
+    { op:"arriendo", barrio:"Morato", canon:3000000, admin:0, m2:112, hab:3, ban:3, parq:1, dep:null,
+      estrato:"4", piso:null, asc:"si", src:"Fincaraíz", date:"2026-09-08", pub:"Inversiones en Finca Raiz La Universal", inc:[],
+      lat:4.6984577, lon:-74.0691479, approx:false, url:"/apartamento-en-arriendo-en-morato-bogota/194224721", img:"",
+      dist:{casa:4.02},
+      via:{gimnasio:12,musica:15,teatro:8,colegio:26,oficina:26}, semana:242,
+      sv:{f:"2025-03", lat:4.698355, lon:-74.069054},
       nuevo:true,
-      note:"130 m² con habitaciones sin dato, 3 baños en Mónaco.",
-      flags:[{t:"Colegio a 23 minutos, de lo mejor de la lista.", s:"ok"},{t:"El aviso no informa la administración.", s:"crit"}] },
+      note:"112 m² con 3 habitaciones, 3 baños, 1 parqueadero en Morato.",
+      flags:[{t:"Colegio a 26 minutos, de lo mejor de la lista.", s:"ok"},{t:"Ascensor confirmado en la ficha.", s:"ok"}] },
     { op:"arriendo", barrio:"Lagos de Córdoba", canon:3700000, admin:0, m2:100, hab:3, ban:2, parq:1, dep:null,
       estrato:"5", piso:"2", asc:"nd", src:"Fincaraíz", date:"2026-08-12", pub:"MARIA ELSA GIRALDO BELTRAN ASESOR INMOBILIARIO", inc:[],
       lat:4.7037275, lon:-74.0693257, approx:false, url:"/apartamento-en-arriendo-en-lagos-de-cordoba-bogota/194110750", img:"https://cdn2.infocasas.com.uy/repo/img/6a7d2991eda06_infocdn__kmztxpgpc5paohbhaoj7z7m86dcghpsenadpinmmjpg.jpg",
@@ -508,7 +529,6 @@
       dist:{casa:3.85},
       via:{gimnasio:17,musica:17,teatro:17,colegio:30,oficina:27}, semana:286,
       sv:{f:"2025-01", lat:4.705114, lon:-74.069003},
-      nuevo:true,
       note:"100 m² con habitaciones sin dato, 2 baños en Mónaco.",
       flags:[{t:"El aviso no informa la administración.", s:"crit"}] },
     { op:"arriendo", barrio:"Niza", canon:3350000, admin:550000, m2:100, hab:3, ban:3, parq:1, dep:null,
@@ -573,6 +593,7 @@
       dist:{casa:3.76},
       via:{gimnasio:21,musica:20,teatro:21,colegio:26,oficina:30}, semana:288,
       sv:{f:"2025-01", lat:4.730925, lon:-74.060746},
+      fav:true,
       note:"102 m² con 3 habitaciones, 2 baños, 2 parqueaderos en Colina Campestre. Piso 11.",
       flags:[{t:"Colegio a 26 minutos, de lo mejor de la lista.", s:"ok"},{t:"Ascensor confirmado en la ficha.", s:"ok"}] },
     { op:"arriendo", barrio:"Santa Bárbara", canon:4000000, admin:null, m2:101.4, hab:3, ban:3, parq:2, dep:null,
@@ -591,6 +612,16 @@
       sv:{f:"2025-03", lat:4.693472, lon:-74.065814},
       note:"125 m² con 3 habitaciones, 2 baños, 1 parqueadero en Niza.",
       flags:[] },
+    { op:"arriendo", barrio:"Niza", canon:4000000, admin:null, m2:115, hab:0, ban:3, parq:0, dep:null,
+      estrato:null, piso:null, asc:"nd", src:"Ciencuadras", date:null, pub:"Ciencuadras", inc:["hab","parq"],
+      lat:4.711777, lon:-74.078308, approx:false, url:"/inmueble/apartamento-en-arriendo-en-niza-norte-bogota-3799709", img:"https://www-img-cc.s3.amazonaws.com/inmuebles/images/3799709/aecc__178664397590_plana.png",
+      dist:{casa:4.86},
+      via:{gimnasio:22,musica:18,teatro:20,colegio:31,oficina:28}, semana:307,
+      sv:{f:"2021-12", lat:4.71187, lon:-74.078266},
+      nuevo:true,
+      fav:true,
+      note:"115 m² con habitaciones sin dato, 3 baños en Niza.",
+      flags:[{t:"El aviso no informa la administración.", s:"crit"}] },
     { op:"arriendo", barrio:"Molinos Norte", canon:4000000, admin:null, m2:113.59, hab:0, ban:3, parq:0, dep:null,
       estrato:null, piso:null, asc:"nd", src:"Ciencuadras", date:null, pub:"Ciencuadras", inc:["hab","parq"],
       lat:4.694804, lon:-74.037558, approx:false, url:"/inmueble/apartamento-en-arriendo-en-molinos-norte-bogota-3631175", img:"https://www-img-cc.s3.amazonaws.com/inmuebles/images/3631175/acddbab177293525363_plana.jpeg",
@@ -645,6 +676,7 @@
       dist:{casa:4.18},
       via:{gimnasio:23,musica:19,teatro:20,colegio:28,oficina:35}, semana:312,
       sv:{f:"2025-01", lat:4.731916, lon:-74.06487},
+      fav:true,
       note:"125 m² con 3 habitaciones, 3 baños, 2 parqueaderos en Colina Campestre. Piso 4.",
       flags:[] },
     { op:"arriendo", barrio:"Santa Bárbara Central", canon:4200000, admin:null, m2:101, hab:3, ban:3, parq:1, dep:null,
@@ -665,7 +697,7 @@
       flags:[{t:"Colegio a 25 minutos, de lo mejor de la lista.", s:"ok"},{t:"El aviso no informa la administración.", s:"crit"}] },
     { op:"arriendo", barrio:"Alhambra", canon:3680000, admin:554000, m2:105, hab:3, ban:2, parq:1, dep:null,
       estrato:null, piso:null, asc:"nd", src:"Metrocuadrado", date:null, pub:"Metrocuadrado", inc:[],
-      lat:4.70005, lon:-74.05777, approx:false, url:"/inmueble/arriendo-apartamento-bogota-alhambra-3-habitaciones-2-banos-1-garajes/393-M6966820", img:"https://multimedia.metrocuadrado.com/393-M6966820/393-M6966820_17_x.jpg",
+      lat:4.70005, lon:-74.05777, approx:false, url:"/inmueble/arriendo-apartamento-bogota-alhambra-3-habitaciones-2-banos-1-garajes/393-M6966820", img:"https://multimedia.metrocuadrado.com/393-M6966820/393-M6966820_49_x.jpg",
       dist:{casa:2.77},
       via:{gimnasio:9,musica:11,teatro:9,colegio:25,oficina:29}, semana:236,
       sv:{f:"2025-01", lat:4.699984, lon:-74.057827},
@@ -767,6 +799,15 @@
       sv:{f:"2025-02", lat:4.685806, lon:-74.035645},
       note:"128 m² con 3 habitaciones, 2 baños, 1 parqueadero en Santa Ana.",
       flags:[{t:"El aviso no informa la administración.", s:"crit"}] },
+    { op:"arriendo", barrio:"Santa Bárbara Central", canon:4500000, admin:null, m2:110, hab:0, ban:3, parq:0, dep:null,
+      estrato:null, piso:null, asc:"nd", src:"Ciencuadras", date:null, pub:"Ciencuadras", inc:["hab","parq"],
+      lat:4.694913, lon:-74.035939, approx:false, url:"/inmueble/apartamento-en-arriendo-en-santa-barbara-central-bogota-3440298", img:"https://www-img-cc.s3.amazonaws.com/inmuebles/images/3440298/bbbd175647598565_plana.jpeg",
+      dist:{casa:1.61},
+      via:{gimnasio:8,musica:10,teatro:13,colegio:28,oficina:30}, semana:254,
+      sv:{f:"2025-02", lat:4.694765, lon:-74.035977},
+      nuevo:true,
+      note:"110 m² con habitaciones sin dato, 3 baños en Santa Bárbara Central.",
+      flags:[{t:"El aviso no informa la administración.", s:"crit"},{t:"A 1,6 km de tu casa actual.", s:"ok"}] },
     { op:"arriendo", barrio:"Molinos Norte", canon:4500000, admin:null, m2:100, hab:0, ban:2, parq:0, dep:null,
       estrato:null, piso:null, asc:"nd", src:"Ciencuadras", date:null, pub:"Ciencuadras", inc:["hab","parq"],
       lat:4.693433, lon:-74.038099, approx:false, url:"/inmueble/apartamento-en-arriendo-en-molinos-norte-bogota-3787837", img:"https://www-img-cc.s3.amazonaws.com/inmuebles/images/3787837/afacb__178301328999_plana.jpeg",
@@ -831,6 +872,15 @@
       sv:{f:"2025-03", lat:4.69394, lon:-74.061518},
       note:"110 m² con 3 habitaciones, 2 baños, 2 parqueaderos en Pasadena.",
       flags:[] },
+    { op:"arriendo", barrio:"Santa Bárbara Central", canon:4750000, admin:null, m2:102, hab:0, ban:3, parq:0, dep:null,
+      estrato:null, piso:null, asc:"nd", src:"Ciencuadras", date:null, pub:"Ciencuadras", inc:["hab","parq"],
+      lat:4.702979, lon:-74.034123, approx:false, url:"/inmueble/apartamento-en-arriendo-en-santa-barbara-central-bogota-3842816", img:"https://www-img-cc.s3.amazonaws.com/inmuebles/images/3842816/acadf_178708757554_plana.jpeg",
+      dist:{casa:0.71},
+      via:{gimnasio:12,musica:12,teatro:16,colegio:28,oficina:40}, semana:292,
+      sv:{f:"2025-02", lat:4.702909, lon:-74.034213},
+      nuevo:true,
+      note:"102 m² con habitaciones sin dato, 3 baños en Santa Bárbara Central.",
+      flags:[{t:"La oficina en Fontibón queda a 40 minutos en pico.", s:"warn"},{t:"El aviso no informa la administración.", s:"crit"},{t:"A 0,7 km de tu casa actual.", s:"ok"}] },
     { op:"arriendo", barrio:"Santa Bárbara", canon:3418000, admin:1382000, m2:129, hab:3, ban:3, parq:3, dep:null,
       estrato:"6", piso:"18", asc:"si", src:"Fincaraíz", date:"2026-04-27", pub:"GRUPO EMPRESARIAL OIKOS S.A.S", inc:[],
       lat:4.6966269, lon:-74.0451195, approx:false, url:"/apartamento-en-arriendo-en-santa-barbara-bogota/193681191", img:"",
@@ -851,10 +901,10 @@
       estrato:"5", piso:"9", asc:"si", src:"Fincaraíz", date:"2026-08-12", pub:"Sara Castillo", inc:[],
       lat:4.708674, lon:-74.0619518, approx:false, url:"/apartamento-en-arriendo-en-atabanza-bogota/194110526", img:"https://cdn2.infocasas.com.uy/repo/img/6a9ee2413c25f_infocdn__nj5x27jrufi4jmyveejumxfbaorjwlodb46mth94jpg.jpg",
       dist:{casa:3.04},
+      via:{gimnasio:15,musica:15,teatro:13,colegio:24,oficina:31}, semana:256,
       sv:{f:"2015-03", lat:4.708705, lon:-74.061988},
-      nuevo:true,
       note:"125 m² con 3 habitaciones, 3 baños, 2 parqueaderos en Atabanza. Piso 9.",
-      flags:[{t:"Ascensor confirmado en la ficha.", s:"ok"}] },
+      flags:[{t:"Colegio a 24 minutos, de lo mejor de la lista.", s:"ok"},{t:"Ascensor confirmado en la ficha.", s:"ok"}] },
     { op:"arriendo", barrio:"Santa Bárbara", canon:4900000, admin:0, m2:110, hab:3, ban:2, parq:1, dep:null,
       estrato:"6", piso:"2", asc:"nd", src:"Fincaraíz", date:"2026-07-18", pub:"Andrea", inc:[],
       lat:4.6973729, lon:-74.0337243, approx:false, url:"/apartamento-en-arriendo-en-santa-barbara-bogota/194008042", img:"https://cdn2.infocasas.com.uy/repo/img/6a5c29abeb113_infocdn__4bty6mdbrn44abqb1iehqobv6ubmuy6b3dxqg7vujpg.jpg",
@@ -893,6 +943,7 @@
       dist:{casa:3.39},
       via:{gimnasio:17,musica:17,teatro:17,colegio:22,oficina:29}, semana:250,
       sv:{f:"2025-02", lat:4.717666, lon:-74.064031},
+      fav:true,
       note:"125 m² con 3 habitaciones, 3 baños, 2 parqueaderos en Iberia.",
       flags:[{t:"Colegio a 22 minutos, de lo mejor de la lista.", s:"ok"}] },
     { op:"arriendo", barrio:"Santa Bárbara", canon:4300000, admin:615000, m2:114, hab:3, ban:2, parq:1, dep:null,
@@ -927,6 +978,15 @@
       sv:{f:"2025-02", lat:4.699599, lon:-74.041384},
       note:"156 m² con 4 habitaciones, 3 baños, 2 parqueaderos en Santa Bárbara.",
       flags:[{t:"A 1,3 km de tu casa actual.", s:"ok"},{t:"Queda en el tope de $5.000.000.", s:"warn"}] },
+    { op:"arriendo", barrio:"Santa Bárbara Central", canon:4950000, admin:null, m2:110, hab:0, ban:3, parq:0, dep:null,
+      estrato:null, piso:null, asc:"nd", src:"Ciencuadras", date:null, pub:"Ciencuadras", inc:["hab","parq"],
+      lat:4.695685, lon:-74.035686, approx:false, url:"/inmueble/apartamento-en-arriendo-en-santa-barbara-central-bogota-3845340", img:"https://www-img-cc.s3.amazonaws.com/inmuebles/images/3845340/add__178796219453_plana.jpeg",
+      dist:{casa:1.52},
+      via:{gimnasio:6,musica:11,teatro:13,colegio:28,oficina:27}, semana:244,
+      sv:{f:"2025-02", lat:4.695583, lon:-74.035718},
+      nuevo:true,
+      note:"110 m² con habitaciones sin dato, 3 baños en Santa Bárbara Central.",
+      flags:[{t:"El aviso no informa la administración.", s:"crit"},{t:"A 1,5 km de tu casa actual.", s:"ok"},{t:"Queda en el tope de $5.000.000.", s:"warn"}] },
     { op:"arriendo", barrio:"Chicó Navarra", canon:3800000, admin:1190000, m2:121.92, hab:4, ban:3, parq:1, dep:null,
       estrato:null, piso:null, asc:"nd", src:"Metrocuadrado", date:null, pub:"Metrocuadrado", inc:[],
       lat:4.688340663909912, lon:-74.05349731445312, approx:false, url:"/inmueble/arriendo-apartamento-bogota-santa-bibiana-4-habitaciones-3-banos-1-garajes/14033-M6984805", img:"https://multimedia.metrocuadrado.com/14033-M6984805/14033-M6984805_1_x.jpg",
@@ -949,7 +1009,6 @@
       dist:{casa:1.17},
       via:{gimnasio:9,musica:9,teatro:13,colegio:29,oficina:31}, semana:262,
       sv:{f:"2025-11", lat:4.698706, lon:-74.035351},
-      nuevo:true,
       note:"132 m² con 3 habitaciones, 2 baños, 2 parqueaderos en Multicentro. Piso 3.",
       flags:[{t:"A 1,2 km de tu casa actual.", s:"ok"},{t:"Ascensor confirmado en la ficha.", s:"ok"},{t:"Queda en el tope de $5.000.000.", s:"warn"}] },
     { op:"arriendo", barrio:"Santa Bárbara Oriental", canon:3440000, admin:1560000, m2:110, hab:3, ban:2, parq:2, dep:null,
@@ -966,7 +1025,6 @@
       dist:{casa:2.98},
       via:{gimnasio:13,musica:15,teatro:14,colegio:23,oficina:24}, semana:230,
       sv:{f:"2024-03", lat:4.708835, lon:-74.06163},
-      nuevo:true,
       note:"127 m² con 3 habitaciones, 3 baños, 2 parqueaderos en Niza. Piso 9.",
       flags:[{t:"Colegio a 23 minutos, de lo mejor de la lista.", s:"ok"},{t:"Ascensor confirmado en la ficha.", s:"ok"},{t:"Queda en el tope de $5.000.000.", s:"warn"}] },
     { op:"arriendo", barrio:"Colina Campestre", canon:5000000, admin:0, m2:100, hab:3, ban:3, parq:1, dep:null,
@@ -995,18 +1053,14 @@
       flags:[{t:"Colegio a 24 minutos, de lo mejor de la lista.", s:"ok"},{t:"La oficina en Fontibón queda a 39 minutos en pico.", s:"warn"},{t:"El aviso no informa la administración.", s:"crit"},{t:"Queda en el tope de $5.000.000.", s:"warn"}] }
   ];
 
+  var FAVS = [
+    {url:"https://www.ciencuadras.com/inmueble/apartamento-en-arriendo-en-bella-suiza-bogota-3159354", portal:"Ciencuadras", barrio:"Bella Suiza", estado:"publicado", total:4500000, m2:130, hab:3, visto:null},
+    {url:"https://www.fincaraiz.com.co/apartamento-en-arriendo-en-atabanza-bogota/194077537", portal:"Fincaraíz", barrio:"Atabanza", estado:"caido", total:null, m2:null, hab:null, visto:null}
+  ];
+
   var GONE = [
-    ["Atabanza","$3.300.300","110 m²","arriendo · 3 hab · Metrocuadrado"],
-    ["Pasadena","$3.700.000","100 m²","arriendo · 3 hab · Fincaraíz"],
-    ["Alhambra","$3.700.000","110 m²","arriendo · 3 hab · Fincaraíz"],
-    ["Colina Campestre","$4.000.000","103 m²","arriendo · 3 hab · Fincaraíz"],
-    ["Niza","$4.000.000","115 m²","arriendo · hab n/d · Ciencuadras"],
-    ["Niza","$4.200.000","100 m²","arriendo · 3 hab · Fincaraíz"],
-    ["Colina Campestre","$4.293.000","105 m²","arriendo · 4 hab · Fincaraíz"],
-    ["Bella Suiza","$4.500.000","130 m²","arriendo · hab n/d · Ciencuadras"],
-    ["Atabanza","$4.800.000","125 m²","arriendo · 3 hab · Fincaraíz"],
-    ["Santa Bárbara","$5.000.000","145 m²","arriendo · 3 hab · Fincaraíz"],
-    ["Bella Suiza","$5.000.000","105 m²","arriendo · hab n/d · Ciencuadras"]
+    ["Alhambra","$3.250.000","100 m²","arriendo · 3 hab · Fincaraíz"],
+    ["Mónaco","$3.300.000","130 m²","arriendo · hab n/d · Ciencuadras"]
   ];
 
   var HOME = { lat: 4.7093816, lon: -74.0345729 };
@@ -1029,7 +1083,7 @@
   function via(d, k) { return d.via && d.via[k] != null ? d.via[k] : null; }
   function hhmm(m) { return m >= 60 ? Math.floor(m / 60) + " h " + (m % 60) + " min" : m + " min"; }
   var state = { barrio:"all", portal:"all", parq2:false, lift:false, near:false, adm:false,
-                cole:false, ofi:false, soloNuevos:false, sort:"total" };
+                cole:false, ofi:false, soloNuevos:false, soloFav:false, sort:"total" };
   var grid = document.getElementById("grid");
   var countEl = document.getElementById("count");
 
@@ -1304,7 +1358,7 @@
     rows.slice().sort(function (a, b) { return b.lat - a.lat; }).forEach(function (d) {
       var t = total(d);
       var m = L.marker([d.lat, d.lon], { icon: L.divIcon({ className:"", iconSize:null,
-        html:'<span class="pin' + (d.nuevo ? " nuevo" : "") + '"><i class="d-' +
+        html:'<span class="pin' + (d.nuevo ? " nuevo" : "") + (d.fav ? " fav" : "") + '"><i class="d-' +
              tier(t).slice(2) + '"></i>' + shortCop(t) + "</span>" }) });
       var foto = d.img
         ? '<img class="ph" src="' + d.img + '" alt="" loading="lazy" referrerpolicy="no-referrer">'
@@ -1381,6 +1435,7 @@
       if (state.parq2 && d.parq < 2) return false;
       if (state.lift && d.asc !== "si") return false;
       if (state.soloNuevos && !d.nuevo) return false;
+      if (state.soloFav && !d.fav) return false;
       if (state.near && d.km >= 2) return false;
       if (state.cole && !(via(d, "colegio") !== null && via(d, "colegio") <= 28)) return false;
       if (state.ofi && !(via(d, "oficina") !== null && via(d, "oficina") <= 30)) return false;
@@ -1415,7 +1470,7 @@
     rows.forEach(function (d) {
       var t = total(d);
       var li = document.createElement("li");
-      li.className = "card " + tier(t) + (d.nuevo ? " es-nuevo" : "");
+      li.className = "card " + tier(t) + (d.nuevo ? " es-nuevo" : "") + (d.fav ? " es-fav" : "");
       li.setAttribute("data-id", d.url);
       var breakdown = d.admin === null ? "canon " + cop(d.canon) + " · administración no informada"
         : d.admin === 0 ? "canon " + cop(d.canon) + " · administración incluida"
@@ -1455,6 +1510,7 @@
       }
       li.innerHTML =
         '<div class="card-head"><span class="barrio">' + d.barrio +
+          (d.fav ? ' <span class="estrella" title="Lo marcaste en favoritos.txt">★</span>' : "") +
           (d.nuevo ? ' <span class="nuevo-tag" title="Apareció en el barrido del ' + FECHA_CORRIDA + '">nuevo</span>' : "") + "</span>" +
           '<span class="estrato">' + (d.estrato ? "estrato " + d.estrato : "estrato n/d") + "</span></div>" +
         '<div class="money"><span class="total">' + cop(t) + "</span>" +
@@ -1468,6 +1524,27 @@
           (d.date ? fmtDate(d.date) : "fecha n/d") + " · " + d.src + "</span></span>" +
         '<a class="go" href="' + linkOf(d) + '" target="_blank" rel="noopener noreferrer">Ver ficha →</a></div>';
       grid.appendChild(li);
+    });
+  }
+
+var favsBox = document.getElementById("favs-body");
+  if (favsBox && FAVS.length) {
+    document.getElementById("bloque-favs").hidden = false;
+    FAVS.forEach(function (f) {
+      var li = document.createElement("li");
+      var sello = f.estado === "publicado" ? '<span class="sello vivo">sigue publicado</span>'
+                : f.estado === "caido" ? '<span class="sello muerto">se cayó</span>'
+                : '<span class="sello duda">no se pudo leer</span>';
+      var datos = [];
+      if (f.total) datos.push(cop(f.total));
+      if (f.m2) datos.push(nice(f.m2) + " m²");
+      if (f.hab) datos.push(f.hab + " hab");
+      if (f.visto) datos.push("visto por última vez el " + f.visto);
+      li.innerHTML = sello +
+        '<span class="qué">' + (f.barrio || "sin barrio") + "</span>" +
+        '<span class="dato">' + datos.join(" · ") + (f.portal ? " · " + f.portal : "") + "</span>" +
+        '<a class="go" href="' + f.url + '" target="_blank" rel="noopener noreferrer">Abrir →</a>';
+      favsBox.appendChild(li);
     });
   }
 

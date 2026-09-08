@@ -58,6 +58,42 @@ y eyebrow). El diseño y el JavaScript de cada página se editan a mano en su HT
 **reescribe entero** en cada corrida: si solo se agregara, los párrafos viejos quedarían
 contradiciendo los datos.
 
+## Los que te interesan
+
+`favoritos.txt`, en la raíz, es una lista de enlaces escrita a mano. Se puede pegar la URL
+completa del portal, una por línea; las secciones `# ── norte ──` y `# ── occidente ──`
+dicen a qué página pertenece cada uno.
+
+```
+python3 tools/render.py --busqueda norte    # los marca al renderizar
+```
+
+Marcar **no filtra**: pone una estrella en la ficha, resalta el pin en el mapa y habilita
+el chip «Solo los marcados». El barrido nunca escribe este archivo.
+
+Lo que sí aporta es memoria. Cuando un marcado no aparece en el barrido, `render.py`
+**consulta su enlace directamente** y lo publica en la sección «Tus marcados» con lo que
+encontró:
+
+| Sello | Qué significa |
+|---|---|
+| sigue publicado | el portal lo devuelve, con su precio y área de hoy |
+| se cayó | el aviso ya no existe |
+| no se pudo leer | el portal respondió algo que el parser no entiende |
+
+Esa distinción es la razón de ser de la sección. **No aparecer en el barrido no significa
+que se haya caído**: el buscador de Ciencuadras devuelve vacío en 8 de los 35 barrios de la
+búsqueda del norte —entre ellos Bella Suiza, Alhambra, Iberia y Colina Campestre— aunque los
+avisos de esos barrios sigan publicados y sean accesibles por su enlace. Decir «se cayó»
+cuando sigue vivo sería el peor error que podría cometer esta página.
+
+Fincaraíz tampoco da 404 cuando borra un aviso: redirige al listado con
+`?addeletedid=<id>`. Eso es lo que se usa para detectar sus caídos.
+
+`favoritos-estado.json` lo escribe la herramienta, no tú: guarda la última ficha conocida
+de cada marcado para poder decir «visto por última vez el …» cuando desaparece.
+
+
 ## Texto que envejece
 
 Todo lo que caduca se **calcula en cada corrida**, nunca se escribe en el HTML:
