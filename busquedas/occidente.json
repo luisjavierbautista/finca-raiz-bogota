@@ -121,11 +121,12 @@
   "familia": 2
  },
  "textos": {
-  "eyebrow": "Arriendo y venta · corredor Calle 26 – Kennedy · 3 portales · actualizado {fecha}",
+  "eyebrow": "Arriendo y venta · corredor Calle 26 – Kennedy · {n_portales} portales · actualizado {fecha}",
   "titulo_html": "Apartamentos Calle 26 · Kennedy — {n} opciones, {fecha}",
   "descripcion_meta": "Apartamentos pequenos en arriendo y venta cerca del edificio de El Tiempo (Calle 26) y de Kennedy: {n} opciones vigentes, con mapa y filtros.",
   "evergreen": "Cada aviso se deduplica por coordenada y área, no por enlace: los portales republican el mismo apartamento con códigos nuevos. En arriendo, la cifra grande es el <strong>costo mensual total</strong> (canon más administración cuando el aviso la informa); en venta es el precio pedido, que casi siempre se negocia. Los tiempos son en carro con el tráfico previsto por Google, no en transporte público: sobre la Calle 26 y la Avenida Boyacá los minutos y los kilómetros no se parecen. La zona sale de dos anclas —El Tiempo y la casa de la familia— y no de una lista de barrios, así que aparecen barrios que no estabas mirando.",
-  "unidad": "opciones"
+  "unidad": "opciones",
+  "deck": "Barrido diario de {portales} alrededor de dos puntos: el edificio de <strong>El Tiempo</strong> sobre la Calle 26 y la <strong>casa de la familia en Kennedy</strong>. Entra lo que quede a 3 km del primero o a 2,5 km de la segunda, sin importar el barrio."
  },
  "reglas": [
   {

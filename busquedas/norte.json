@@ -141,11 +141,15 @@
   "oficina": 2.5
  },
  "textos": {
-  "eyebrow": "Búsqueda de arriendo · Bogotá norte · 3 portales · actualizado {fecha}",
+  "eyebrow": "Búsqueda de arriendo · Bogotá norte · {n_portales} portales · actualizado {fecha}",
   "titulo_html": "Arriendo Bogotá norte — {n} candidatos, {fecha}",
   "descripcion_meta": "Busqueda de apartamento en arriendo en el norte de Bogota: {n} candidatos vigentes, con mapa y filtros.",
   "evergreen": "Los portales publican el mismo apartamento con precios y datos distintos, así que cada aviso se deduplica por coordenada y área, no por enlace. La cifra grande de cada ficha es el <strong>costo mensual total</strong>: en Suba la mayoría incluye la administración en el canon y en Usaquén casi siempre va aparte, y compararlos por canon llevaría a escoger mal. Los tiempos de viaje son en carro, con el tráfico previsto por Google para el día y la hora reales de cada compromiso. El del colegio es referencia comparativa entre apartamentos, no el tiempo de la ruta escolar, que recoge a otros niños y depende de cuál les asignen.",
-  "unidad": "candidatos"
+  "unidad": "candidatos",
+  "h1": "Quedan <em>{dias} días</em> para entregar el 803",
+  "h1_ultimo_dia": "<em>Hoy</em> se entrega el 803",
+  "h1_vencido": "El 803 se entregó hace <em>{dias_pasados} días</em>",
+  "deck": "Barrido completo de {portales} sobre tus barrios. La entrega del apartamento actual es el <strong>{fecha_limite_larga}</strong>."
  },
  "reglas": [
   {
@@ -215,5 +219,23 @@
   "para": "Para Luis",
   "titulo": "Arriendo en el norte",
   "que": "Mínimo 100 m², 3 habitaciones, parqueadero y ascensor, hasta $5.000.000 de canon más administración. Con tiempos de viaje al colegio, la oficina, el gimnasio, música y teatro."
+ },
+ "fecha_limite": "2026-10-11",
+ "alias": {
+  "santa barbara": "Santa Bárbara",
+  "santa barbara central": "Santa Bárbara Central",
+  "santa barbara oriental": "Santa Bárbara Oriental",
+  "santa barbara occidental": "Santa Bárbara Occidental",
+  "chico navarra": "Chicó Navarra",
+  "malibu": "Malibú",
+  "cordoba": "Córdoba",
+  "lagos de cordoba": "Lagos de Córdoba",
+  "monaco": "Mónaco",
+  "potosi": "Potosí",
+  "ciudad jardin norte": "Ciudad Jardín Norte",
+  "nueva autopista": "Nueva Autopista",
+  "san jose de bavaria": "San José de Bavaria",
+  "britalia": "Britalia",
+  "la calleja": "La Calleja"
  }
 }

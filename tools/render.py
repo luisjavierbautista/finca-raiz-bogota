@@ -11,6 +11,7 @@ descripción y eyebrow); el diseño y el JavaScript se editan a mano en el HTML.
 El resumen se reescribe entero en cada corrida: si solo se agregara, los párrafos
 de corridas viejas quedarían contradiciendo los datos.
 """
+import datetime as dt
 import io, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -45,6 +46,98 @@ def js(v):
 
 def num(v):
     return int(v) if isinstance(v, float) and v == int(v) else v
+
+
+MESES_LARGOS = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
+                "septiembre", "octubre", "noviembre", "diciembre"]
+BOGOTA = dt.timezone(dt.timedelta(hours=-5))
+
+
+def hoy():
+    return dt.datetime.now(BOGOTA).date()
+
+
+def fecha_larga(iso):
+    y, m, d = (int(x) for x in iso.split("-"))
+    return "%d de %s de %d" % (d, MESES_LARGOS[m - 1], y)
+
+
+def encabezado(cfg, avisos, nuevos, caidos):
+    """Titular y bajada del día.
+
+    Van aquí y no escritos en el HTML porque envejecen: una cuenta regresiva escrita
+    a mano queda mintiendo al día siguiente, y la lista de portales quedó anunciando
+    Properati meses después de que dejara de responder.
+    """
+    t = cfg["textos"]
+    cuenta = {}                            # los portales que de verdad aportaron hoy,
+    for a in avisos:                       # nombrados de mayor a menor aporte
+        cuenta[a["src"]] = cuenta.get(a["src"], 0) + 1
+    portales = sorted(cuenta, key=lambda k: (-cuenta[k], k))
+    lista = (" y ".join([", ".join(portales[:-1]), portales[-1]]) if len(portales) > 1
+             else (portales[0] if portales else "ningún portal"))
+
+    datos = {"n": len(avisos), "nuevos": len(nuevos), "caidos": len(caidos),
+             "portales": lista,
+             "arriendo": sum(1 for a in avisos if a["op"] == "arriendo"),
+             "venta": sum(1 for a in avisos if a["op"] == "venta")}
+
+    limite = cfg.get("fecha_limite")
+    if limite:
+        dias = (dt.date(*(int(x) for x in limite.split("-"))) - hoy()).days
+        datos.update(dias=dias, dias_pasados=-dias, fecha_limite_larga=fecha_larga(limite))
+        if dias > 1:
+            plantilla_h1 = t.get("h1")
+        elif dias == 1:
+            plantilla_h1 = t.get("h1", "").replace("{dias} días", "1 día").replace("Quedan", "Queda")
+        elif dias == 0:
+            plantilla_h1 = t.get("h1_ultimo_dia", t.get("h1"))
+        else:
+            plantilla_h1 = t.get("h1_vencido", t.get("h1"))
+    else:
+        plantilla_h1 = t.get("h1")
+
+    h1 = plantilla_h1.format(**datos) if plantilla_h1 else None
+    deck = t["deck"].format(**datos) if t.get("deck") else None
+    return h1, deck, len(portales)
+
+
+def tildes(cfg):
+    """Nombre bonito de cada barrio, indexado sin tildes.
+
+    Los portales escriben «Santa Barbara» y el barrido guarda lo que ellos mandan.
+    La corrección es de presentación: se aplica al renderizar, así no hay que rehacer
+    el barrido ni se pierde el diferencial del día.
+    """
+    tabla = {}
+    for clave, bonito in (cfg.get("alias") or {}).items():
+        tabla[comun.sinacento(clave)] = bonito
+        tabla[comun.sinacento(bonito)] = bonito
+    return tabla
+
+
+def con_tilde(tabla, nombre):
+    return tabla.get(comun.sinacento(nombre or ""), nombre)
+
+
+def barrios_vacios(cfg, avisos):
+    """Barrios de la lista que hoy no tienen ni un aviso.
+
+    Se calcula, no se escribe: la lista cambia todos los días y una escrita a mano
+    termina nombrando barrios que sí tienen oferta.
+    """
+    if cfg["filtro"] != "barrios":
+        return None
+    alias = cfg.get("alias", {})
+    con_oferta = {comun.sinacento(a["barrio"]) for a in avisos}
+    vacios = []
+    for b in cfg["barrios"]:
+        nombre = alias.get(b, comun.bonito(b))
+        if comun.sinacento(nombre) in con_oferta:
+            continue
+        if nombre not in vacios:
+            vacios.append(nombre)
+    return vacios
 
 
 def primera(avisos, nuevos, caidos):
@@ -247,6 +340,10 @@ def main():
     except Exception:
         fecha = gen
 
+    tabla = tildes(cfg)
+    for a in avisos + caidos:
+        a["barrio"] = con_tilde(tabla, a.get("barrio"))
+
     frec = cfg["frecuencia"]
     for a in avisos:
         a.setdefault("op", "arriendo")
@@ -291,9 +388,23 @@ def main():
                lambda _m: resumen(cfg, avisos, nuevos, caidos, fecha, es_primera),
                s, count=1, flags=re.S)
 
+    h1, deck, n_portales = encabezado(cfg, avisos, nuevos, caidos)
+    if h1:
+        s = re.sub(r"<h1>.*?</h1>", lambda _m: "<h1>%s</h1>" % h1, s, count=1, flags=re.S)
+    if deck:
+        s = re.sub(r'<p class="deck">.*?</p>',
+                   lambda _m: '<p class="deck">\n      %s\n    </p>' % deck, s, count=1, flags=re.S)
+
+    vacios = barrios_vacios(cfg, avisos)
+    if vacios is not None and '<ul class="barrio-list">' in s:
+        lista = ('  <ul class="barrio-list">\n      '
+                 + "".join("<li>%s</li>" % b for b in vacios) + "\n    </ul>")
+        s = re.sub(r'  <ul class="barrio-list">.*?</ul>', lambda _m: lista, s, count=1, flags=re.S)
+
     t = cfg["textos"]
     s = re.sub(r'<div class="eyebrow">[^<]*</div>',
-               '<div class="eyebrow">%s</div>' % t["eyebrow"].format(fecha=fecha), s, count=1)
+               '<div class="eyebrow">%s</div>'
+               % t["eyebrow"].format(fecha=fecha, n_portales=n_portales), s, count=1)
     s = re.sub(r"<title>[^<]*</title>",
                "<title>%s</title>" % t["titulo_html"].format(n=len(avisos), fecha=fecha), s, count=1)
     s = re.sub(r'<meta name="description" content="[^"]*">',

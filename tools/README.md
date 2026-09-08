@@ -58,6 +58,28 @@ y eyebrow). El diseño y el JavaScript de cada página se editan a mano en su HT
 **reescribe entero** en cada corrida: si solo se agregara, los párrafos viejos quedarían
 contradiciendo los datos.
 
+## Texto que envejece
+
+Todo lo que caduca se **calcula en cada corrida**, nunca se escribe en el HTML:
+
+| En la página | De dónde sale |
+|---|---|
+| Titular con la cuenta regresiva | `fecha_limite` del JSON contra la fecha de hoy |
+| Bajada, con los portales nombrados | los `src` que de verdad aportaron avisos ese día |
+| «N portales» del eyebrow | lo mismo, contado |
+| Recuadros, resumen y tablas | los datos de la corrida |
+| Barrios sin oferta | los barrios del JSON menos los que tienen avisos |
+
+La regla salió de encontrar la página anunciando «faltan 62 días» cuando faltaban 33, y
+nombrando a Properati meses después de que dejara de responder. Si escribes una cifra o
+una fecha a mano en el HTML, va a quedar mintiendo: ponla como plantilla en
+`busquedas/<id>.json` y que `render.py` la calcule.
+
+Las tildes de los barrios se corrigen **al renderizar**, con el mapa `alias` del JSON: los
+portales escriben «Santa Barbara» y el barrido guarda lo que ellos mandan, así que la
+corrección es de presentación y no obliga a rehacer el barrido.
+
+
 ## Tiempos de viaje
 
 `python3 tools/viajes.py --busqueda X` calcula, para cada edificio, cuánto toma llegar en carro a los
