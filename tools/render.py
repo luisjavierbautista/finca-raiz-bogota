@@ -16,6 +16,7 @@ import io, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import comun
+from barrios import limpia_barrio
 from comun import clave_edificio, ruta
 
 MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
@@ -340,9 +341,15 @@ def main():
     except Exception:
         fecha = gen
 
-    tabla = tildes(cfg)
-    for a in avisos + caidos:
-        a["barrio"] = con_tilde(tabla, a.get("barrio"))
+    # Los nombres se arreglan al presentar: así la corrección entra el mismo día,
+    # sin rehacer el barrido ni perder el diferencial.
+    if cfg["filtro"] == "radio":
+        for a in avisos + caidos:
+            a["barrio"] = limpia_barrio(a.get("barrio")) or "Sin barrio"
+    else:
+        tabla = tildes(cfg)
+        for a in avisos + caidos:
+            a["barrio"] = con_tilde(tabla, a.get("barrio"))
 
     frec = cfg["frecuencia"]
     for a in avisos:

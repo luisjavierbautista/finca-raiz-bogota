@@ -75,9 +75,26 @@ nombrando a Properati meses después de que dejara de responder. Si escribes una
 una fecha a mano en el HTML, va a quedar mintiendo: ponla como plantilla en
 `busquedas/<id>.json` y que `render.py` la calcule.
 
-Las tildes de los barrios se corrigen **al renderizar**, con el mapa `alias` del JSON: los
-portales escriben «Santa Barbara» y el barrido guarda lo que ellos mandan, así que la
-corrección es de presentación y no obliga a rehacer el barrido.
+Los nombres de barrio se arreglan **al renderizar**, así la corrección entra el mismo día
+sin rehacer el barrido ni perder el diferencial:
+
+- **Modo barrios** (`norte`): el mapa `alias` del JSON les devuelve las tildes. Los portales
+  escriben «Santa Barbara» y el barrido guarda lo que ellos mandan.
+- **Modo radio** (`occidente`): `tools/barrios.py`. Ahí el barrio no sale de una lista
+  nuestra sino de la cadena que el portal haya escrito, y venía sucia: 414 avisos producían
+  **155 nombres distintos**. Metrocuadrado y Ciencuadras pegan la localidad y la UPZ al
+  nombre («Villa Alsacia Castilla», «Normandia Zona Urbana»), parten los sectores en
+  numerales romanos («Ciudad Techo Ii», «Normandia I Sector») y a veces mandan la frase del
+  aviso («Apartamento En Arriendo O Venta En Capellania»). Quedan **109**.
+
+Lo que `barrios.py` recorta es ruido de catálogo, nunca información: «Occidental» u
+«Oriental» distinguen barrios de verdad y se conservan; «II Sector» o «Etapa III» son
+subdivisiones internas y se colapsan. Dos guardas que costaron un par de intentos:
+
+- No se recorta la cola si lo que queda son puros calificativos: «Ciudad Techo» no puede
+  volverse «Ciudad», ni «Bosques de Castilla» volverse «Bosques de».
+- No se recorta por delante. Quitar «Normandía» de «Normandía Occidental» dejaba
+  «Occidental», que no nombra nada.
 
 
 ## Tiempos de viaje

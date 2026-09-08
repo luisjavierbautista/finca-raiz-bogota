@@ -15,6 +15,7 @@ from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import comun
 from comun import get, dentro, distancias, bonito, sinacento, ruta
+from barrios import limpia_barrio
 
 # Cada portal nombra la operación a su manera.
 RUTA_FR = {"arriendo": "arriendo", "venta": "venta"}
@@ -28,7 +29,9 @@ def normaliza_barrio(cfg, crudo):
     """En modo barrios exige que caiga en la lista; en modo radio acepta y embellece."""
     s = re.sub(r"\s+", " ", sinacento(crudo).replace("-", " "))
     if cfg["filtro"] == "radio":
-        return bonito(s) or "Sin barrio"
+        # El portal escribe lo que quiere: localidad pegada, sectores en numerales
+        # romanos, la frase entera del aviso. Sin limpiar, los filtros no sirven.
+        return limpia_barrio(crudo) or "Sin barrio"
     alias = cfg.get("alias", {})
     if s in alias:
         return alias[s]
