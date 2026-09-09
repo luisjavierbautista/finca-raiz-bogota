@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-08",
+ "actualizado": "2026-09-09",
  "marcados": {
   "/apartamento-en-arriendo-en-colina-campestre-bogota/10786125": {
    "barrio": "Colina Campestre",
@@ -9,7 +9,7 @@
    "total": 4000000,
    "url": "https://www.fincaraiz.com.co/apartamento-en-arriendo-en-colina-campestre-bogota/10786125",
    "vigente_como": "/apartamento-en-arriendo-en-colina-campestre-bogota/10786125",
-   "visto": "2026-09-08"
+   "visto": "2026-09-09"
   },
   "/apartamento-en-arriendo-en-colina-campestre-bogota/193832290": {
    "barrio": "Colina Campestre",
@@ -20,6 +20,16 @@
    "url": "https://www.fincaraiz.com.co/apartamento-en-arriendo-en-colina-campestre-bogota/193832290",
    "vigente_como": "/apartamento-en-arriendo-en-colina-campestre-bogota/193832290",
    "visto": "2026-09-08"
+  },
+  "/inmueble/apartamento-en-arriendo-en-bella-suiza-bogota-3159354": {
+   "barrio": "Bella Suiza",
+   "m2": 130.0,
+   "sitio": "4.7060|-74.0293|130",
+   "src": "Ciencuadras",
+   "total": 4500000,
+   "url": "https://www.ciencuadras.com/inmueble/apartamento-en-arriendo-en-bella-suiza-bogota-3159354",
+   "vigente_como": "/inmueble/apartamento-en-arriendo-en-bella-suiza-bogota-3159354",
+   "visto": "2026-09-09"
   },
   "/inmueble/apartamento-en-arriendo-en-niza-norte-bogota-3799709": {
    "barrio": "Niza",
@@ -39,7 +49,7 @@
    "total": 4913000,
    "url": "https://www.metrocuadrado.com/inmueble/arriendo-apartamento-bogota-iberia-3-habitaciones-3-banos-2-garajes/11139-M6997038",
    "vigente_como": "/inmueble/arriendo-apartamento-bogota-iberia-3-habitaciones-3-banos-2-garajes/11139-M6997038",
-   "visto": "2026-09-08"
+   "visto": "2026-09-09"
   }
  }
 }
