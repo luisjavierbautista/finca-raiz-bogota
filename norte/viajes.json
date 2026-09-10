@@ -3678,6 +3678,33 @@
     "min_libre": 27,
     "km": 13.7
    }
+  },
+  "4.7230|-74.0730": {
+   "gimnasio": {
+    "min": 23,
+    "min_libre": 20,
+    "km": 6.6
+   },
+   "musica": {
+    "min": 20,
+    "min_libre": 20,
+    "km": 8.9
+   },
+   "teatro": {
+    "min": 20,
+    "min_libre": 16,
+    "km": 6.4
+   },
+   "colegio": {
+    "min": 27,
+    "min_libre": 24,
+    "km": 12.7
+   },
+   "oficina": {
+    "min": 37,
+    "min_libre": 26,
+    "km": 11.0
+   }
   }
  }
 }
