@@ -303,13 +303,13 @@
     <div class="tile is-key"><div class="n">68</div><div class="l">candidatos vigentes hoy</div></div>
     <div class="tile"><div class="n">6</div><div class="l">no estaban en el barrido anterior</div></div>
     <div class="tile"><div class="n">27</div><div class="l">con ascensor confirmado en la ficha</div></div>
-    <div class="tile"><div class="n">3h42</div><div class="l">el mejor viaje semanal, solo ida</div></div>
+    <div class="tile"><div class="n">3h40</div><div class="l">el mejor viaje semanal, solo ida</div></div>
   </div>
 
   <div class="verdict">
     <h2>Qué cambió</h2>
     <p id="auto-resumen">
-      El barrido del 12 sep 2026 deja <strong>68 candidatos vigentes</strong>: 6 que no estaban en la corrida anterior y 3 que se cayeron de los portales. El más económico que entró está en Santa Bárbara: 140 m² por <strong>$4.200.000</strong>. Solo <strong>27 de 68</strong> declaran ascensor en la ficha: el resto quedan marcados como sin confirmar, no como sin ascensor. En tiempos de viaje, el mejor ubicado es <strong>Alhambra</strong>: 24 minutos a Colegio y 22 minutos a Oficina, para un total de 3h42 por semana solo de ida.
+      El barrido del 12 sep 2026 deja <strong>68 candidatos vigentes</strong>: 6 que no estaban en la corrida anterior y 3 que se cayeron de los portales. El más económico que entró está en Santa Bárbara: 140 m² por <strong>$4.200.000</strong>. Solo <strong>27 de 68</strong> declaran ascensor en la ficha: el resto quedan marcados como sin confirmar, no como sin ascensor. En tiempos de viaje, el mejor ubicado es <strong>Santa Bárbara</strong>: 22 minutos a Colegio y 27 minutos a Oficina, para un total de 3h40 por semana solo de ida.
     </p>
     <p>
       Los portales publican el mismo apartamento con precios y datos distintos, así que cada aviso se deduplica por coordenada y área, no por enlace. La cifra grande de cada ficha es el <strong>costo mensual total</strong>: en Suba la mayoría incluye la administración en el canon y en Usaquén casi siempre va aparte, y compararlos por canon llevaría a escoger mal. Los tiempos de viaje son en carro, con el tráfico previsto por Google para el día y la hora reales de cada compromiso. El del colegio es referencia comparativa entre apartamentos, no el tiempo de la ruta escolar, que recoge a otros niños y depende de cuál les asignen.
@@ -459,9 +459,9 @@
                 "Ciencuadras":"https://www.ciencuadras.com", "Properati":"https://www.properati.com.co" };
   function linkOf(d) { return (BASES[d.src] || BASES["Fincaraíz"]) + d.url; }
 
-  var CARTO_KEY = "";
+  var CARTO_KEY = "cb1_2i4b_1_7033d48a7cca7cc2e3a223cf";
 
-  var SV_KEY = "";
+  var SV_KEY = "AIzaSyBf-KHphnkdiM0rLRysrLwcFeQgm1937k8";
 
   var FECHA_CORRIDA = "12 sep 2026";
 
@@ -665,9 +665,11 @@
       estrato:null, piso:null, asc:"nd", src:"Metrocuadrado", date:null, pub:"Metrocuadrado", inc:[],
       lat:4.7060184, lon:-74.058365, approx:false, url:"/inmueble/arriendo-apartamento-bogota-el-batan-4-habitaciones-4-banos-2-garajes/MC6753135", img:"https://multimedia.metrocuadrado.com/MC6753135/MC6753135_44_x.jpg",
       dist:{casa:2.67},
+      via:{gimnasio:10,musica:13,teatro:9,colegio:22,oficina:27}, semana:220,
+      sv:{f:"2025-01", lat:4.705993, lon:-74.058438},
       nuevo:true,
       note:"140 m² con 4 habitaciones, 4 baños, 2 parqueaderos en Santa Bárbara.",
-      flags:[{t:"El aviso no informa la administración.", s:"crit"}] },
+      flags:[{t:"Colegio a 22 minutos, de lo mejor de la lista.", s:"ok"},{t:"El aviso no informa la administración.", s:"crit"}] },
     { op:"arriendo", barrio:"Navarra", canon:4200000, admin:null, m2:122.48, hab:3, ban:3, parq:2, dep:null,
       estrato:null, piso:null, asc:"nd", src:"Metrocuadrado", date:null, pub:"Metrocuadrado", inc:[],
       lat:4.689913, lon:-74.05323, approx:false, url:"/inmueble/arriendo-apartamento-bogota-santa-bibiana-3-habitaciones-3-banos-2-garajes/MC6967869", img:"https://multimedia.metrocuadrado.com/MC6967869/MC6967869_1_x.jpg",
@@ -933,9 +935,11 @@
       estrato:null, piso:null, asc:"nd", src:"Metrocuadrado", date:null, pub:"Metrocuadrado", inc:[],
       lat:4.6956816, lon:-74.03941, approx:false, url:"/inmueble/arriendo-apartamento-bogota-santa-barbara-central-3-habitaciones-2-banos-1-garajes/MC6978439", img:"https://multimedia.metrocuadrado.com/MC6978439/MC6978439_1_x.jpg",
       dist:{casa:1.61},
+      via:{gimnasio:6,musica:11,teatro:13,colegio:26,oficina:31}, semana:244,
+      sv:{f:"2025-10", lat:4.695633, lon:-74.039459},
       nuevo:true,
       note:"114 m² con 3 habitaciones, 2 baños, 1 parqueadero en Santa Bárbara Central.",
-      flags:[{t:"A 1,6 km de tu casa actual.", s:"ok"}] },
+      flags:[{t:"Colegio a 26 minutos, de lo mejor de la lista.", s:"ok"},{t:"A 1,6 km de tu casa actual.", s:"ok"}] },
     { op:"arriendo", barrio:"Santa Bárbara", canon:4000000, admin:940000, m2:105, hab:3, ban:3, parq:2, dep:null,
       estrato:null, piso:null, asc:"nd", src:"Metrocuadrado", date:null, pub:"Metrocuadrado", inc:[],
       lat:4.702784538269043, lon:-74.03450775146484, approx:false, url:"/inmueble/arriendo-apartamento-bogota-santa-barbara-central-3-habitaciones-3-banos-2-garajes/21145-M6518120", img:"https://multimedia.metrocuadrado.com/21145-M6518120/21145-M6518120_1_x.jpg",
