@@ -323,13 +323,13 @@
     <div class="tile is-key"><div class="n">136</div><div class="l">en arriendo hasta $2.000.000</div></div>
     <div class="tile"><div class="n">303</div><div class="l">en venta hasta $500 millones</div></div>
     <div class="tile"><div class="n">38</div><div class="l">no estaban en el barrido anterior</div></div>
-    <div class="tile"><div class="n">213</div><div class="l">a menos de 20 minutos de El Tiempo</div></div>
+    <div class="tile"><div class="n">215</div><div class="l">a menos de 20 minutos de El Tiempo</div></div>
   </div>
 
   <div class="verdict">
     <h2>Qué cambió</h2>
     <p id="auto-resumen">
-      El barrido del 14 sep 2026 deja <strong>439 opciones vigentes</strong>: 38 que no estaban en la corrida anterior y 32 que se cayeron de los portales. Son <strong>136 en arriendo</strong> y <strong>303 en venta</strong>. En arriendo, el más económico que entró está en Super Manzana: 55 m² por <strong>$1.300.000</strong>. En venta, el más económico que entró está en Normandía: 50 m² por <strong>$245 millones</strong>. En tiempos de viaje, el mejor ubicado es <strong>Montevideo</strong>: 12 minutos a El Tiempo y 15 minutos a la casa de la familia, para un total de 1h30 por semana solo de ida. Un aviso nuevo en venta en El Tejar (Ciencuadras) trae el área mal digitada por el portal —79.340 m² por $450 millones—: es casi con certeza un error de captura (seguramente 79,34 m²), no un lote; conviene ignorarlo hasta confirmar por el enlace. El nuevo en arriendo que figura como "Oficina En Arriendo la Estrada" ($1.400.000, 90 m²) es, según su propio enlace, una oficina y no un apartamento: Ciencuadras no publica el tipo de inmueble en esta búsqueda y se coló por no informar habitaciones; no debería contarse como candidato.
+      El barrido del 14 sep 2026 deja <strong>439 opciones vigentes</strong>: 38 que no estaban en la corrida anterior y 32 que se cayeron de los portales. Son <strong>136 en arriendo</strong> y <strong>303 en venta</strong>. En arriendo, el más económico que entró está en Super Manzana: 55 m² por <strong>$1.300.000</strong>. En venta, el más económico que entró está en Normandía: 50 m² por <strong>$245 millones</strong>. En tiempos de viaje, el mejor ubicado es <strong>Montevideo</strong>: 12 minutos a El Tiempo y 15 minutos a la casa de la familia, para un total de 1h30 por semana solo de ida.
     </p>
     <p>
       Cada aviso se deduplica por coordenada y área, no por enlace: los portales republican el mismo apartamento con códigos nuevos. En arriendo, la cifra grande es el <strong>costo mensual total</strong> (canon más administración cuando el aviso la informa); en venta es el precio pedido, que casi siempre se negocia. Los tiempos son en carro con el tráfico previsto por Google, no en transporte público: sobre la Calle 26 y la Avenida Boyacá los minutos y los kilómetros no se parecen. La zona sale de dos anclas —El Tiempo y la casa de la familia— y no de una lista de barrios, así que aparecen barrios que no estabas mirando.
@@ -452,9 +452,9 @@
                 "Ciencuadras":"https://www.ciencuadras.com", "Properati":"https://www.properati.com.co" };
   function linkOf(d) { return (BASES[d.src] || BASES["Fincaraíz"]) + d.url; }
 
-  var CARTO_KEY = "";
+  var CARTO_KEY = "cb1_2i4b_1_7033d48a7cca7cc2e3a223cf";
 
-  var SV_KEY = "";
+  var SV_KEY = "AIzaSyBf-KHphnkdiM0rLRysrLwcFeQgm1937k8";
 
   var FECHA_CORRIDA = "14 sep 2026";
 
@@ -695,9 +695,11 @@
       estrato:null, piso:null, asc:"nd", src:"Ciencuadras", date:null, pub:"Ciencuadras", inc:["hab","parq"],
       lat:4.61884, lon:-74.154172, approx:false, url:"/inmueble/apartamento-en-arriendo-en-super-manzana-8-bogota-3777160", img:"https://www-img-cc.s3.amazonaws.com/inmuebles/images/3777160/abaf__178225270739_plana.jpeg",
       dist:{familia:1.51,tiempo:7.07},
+      via:{tiempo:37,familia:8}, semana:201,
+      sv:{f:"2025-04", lat:4.618718, lon:-74.154146},
       nuevo:true,
       note:"55 m² con habitaciones sin dato, 1 baños en Super Manzana.",
-      flags:[{t:"El aviso no informa la administración.", s:"crit"},{t:"El aviso no publica cuántas habitaciones tiene.", s:"crit"},{t:"El aviso no dice si tiene parqueadero.", s:"warn"}] },
+      flags:[{t:"A 8 minutos de la casa de la familia.", s:"ok"},{t:"El Tiempo queda a 37 minutos en la mañana.", s:"warn"},{t:"El aviso no informa la administración.", s:"crit"},{t:"El aviso no publica cuántas habitaciones tiene.", s:"crit"},{t:"El aviso no dice si tiene parqueadero.", s:"warn"}] },
     { op:"arriendo", barrio:"Kennedy", canon:1250000, admin:90000, m2:50, hab:3, ban:1, parq:0, dep:null,
       estrato:"3", piso:null, asc:"si", src:"Fincaraíz", date:"2026-09-02", pub:"Inmobiliaria TuCasa.com", inc:[],
       lat:4.6295175, lon:-74.1534745, approx:false, url:"/apartamento-en-arriendo-en-kennedy-bogota/194202246", img:"",
@@ -1425,9 +1427,11 @@
       estrato:"3", piso:"2", asc:"nd", src:"Fincaraíz", date:"2026-09-13", pub:"Diana Rondon", inc:[],
       lat:4.6780942, lon:-74.1058793, approx:false, url:"/apartamento-en-arriendo-en-engativa-bogota/194250291", img:"https://cdn2.infocasas.com.uy/repo/img/6aa6c75c2abb1_infocdn__yzp6szcl1jllqo4yuptagx7xy8a1aumxq0z1ztfbjpg.jpg",
       dist:{familia:7.22,tiempo:2.22},
+      via:{tiempo:15,familia:35}, semana:145,
+      sv:{f:"2025-03", lat:4.678242, lon:-74.105789},
       nuevo:true,
       note:"55 m² con 2 habitaciones, 1 baños, 0 parqueaderos en Engativá. Piso 2.",
-      flags:[] },
+      flags:[{t:"A 15 minutos de El Tiempo en hora pico.", s:"ok"}] },
     { op:"arriendo", barrio:"Los Monjes", canon:1900000, admin:0, m2:60, hab:3, ban:3, parq:0, dep:null,
       estrato:"3", piso:null, asc:"si", src:"Fincaraíz", date:"2026-07-17", pub:"Inmobiliarias Aliadas", inc:[],
       lat:4.6794394, lon:-74.1135738, approx:false, url:"/apartamento-en-arriendo-en-los-monjes-bogota/194002764", img:"",
@@ -1474,6 +1478,8 @@
       estrato:"4", piso:"7", asc:"nd", src:"Fincaraíz", date:"2026-09-06", pub:"Hector A", inc:[],
       lat:4.6581546, lon:-74.1258106, approx:false, url:"/apartamento-en-arriendo-en-fontibon-bogota/194217399", img:"https://cdn2.infocasas.com.uy/repo/img/6a9e0fe258ca2_infocdn__larnvxrri7oow4jrsoomssprdz440kxe4cfvrrsijpg.jpg",
       dist:{familia:4.22,tiempo:2.44},
+      via:{tiempo:26,familia:18}, semana:166,
+      sv:{f:"2025-03", lat:4.658035, lon:-74.125663},
       nuevo:true,
       note:"47 m² con 2 habitaciones, 1 baños, 0 parqueaderos en Fontibón. Piso 7.",
       flags:[{t:"Queda en el tope de $2.000.000.", s:"warn"}] },
@@ -2412,9 +2418,11 @@
       estrato:"3", piso:"5", asc:"nd", src:"Fincaraíz", date:"2026-08-07", pub:"Qrador SAS", inc:[],
       lat:4.6104264659751, lon:-74.134689461623, approx:false, url:"/apartamento-en-venta-en-carvajal-bogota/194088398", img:"https://cdn2.infocasas.com.uy/repo/img/6aa7a8946e2b9_infocdn__originaljpg.jpg",
       dist:{familia:1.60,tiempo:6.28},
+      via:{tiempo:36,familia:9}, semana:198,
+      sv:{f:"2025-02", lat:4.610393, lon:-74.134661},
       nuevo:true,
       note:"67,4 m² con 3 habitaciones, 2 baños, 1 parqueadero en Carvajal. Piso 5.",
-      flags:[] },
+      flags:[{t:"A 9 minutos de la casa de la familia.", s:"ok"},{t:"El Tiempo queda a 36 minutos en la mañana.", s:"warn"}] },
     { op:"venta", barrio:"La Felicidad", canon:330000000, admin:null, m2:45, hab:2, ban:2, parq:0, dep:null,
       estrato:"3", piso:"8", asc:"si", src:"Fincaraíz", date:"2026-09-05", pub:"Builder Brockers", inc:[],
       lat:4.6593278, lon:-74.126036, approx:false, url:"/apartamento-en-venta-en-la-felicidad-bogota/194214505", img:"https://cdn2.infocasas.com.uy/repo/img/6a9c28b5470ad_infocdn__f83qsrueirhasenezhlh4arcxfmqnsudsvkqw4t2jpg.jpg",
@@ -2989,6 +2997,8 @@
       estrato:null, piso:null, asc:"nd", src:"Ciencuadras", date:null, pub:"Ciencuadras", inc:["hab","parq"],
       lat:4.667543, lon:-74.12554, approx:false, url:"/inmueble/apartamento-en-venta-en-modelia-occidental-bogota-3819802", img:"https://www-img-cc.s3.amazonaws.com/inmuebles/images/3819802/abaaac__178541839296_plana.jpeg",
       dist:{familia:5.20,tiempo:2.63},
+      via:{tiempo:21,familia:27}, semana:159,
+      sv:{f:"2025-03", lat:4.667434, lon:-74.125591},
       nuevo:true,
       note:"57 m² con habitaciones sin dato, 2 baños en Modelia Occidental.",
       flags:[{t:"El aviso no publica cuántas habitaciones tiene.", s:"crit"},{t:"El aviso no dice si tiene parqueadero.", s:"warn"}] },
@@ -3198,9 +3208,11 @@
       estrato:"3", piso:"16", asc:"si", src:"Fincaraíz", date:"2026-03-10", pub:"HOME PRO", inc:[],
       lat:4.6782761, lon:-74.0966056, approx:false, url:"/apartamento-en-venta-en-las-ferias-bogota/193488404", img:"",
       dist:{familia:7.85,tiempo:2.37},
+      via:{tiempo:12,familia:41}, semana:142,
+      sv:{f:"2025-03", lat:4.678042, lon:-74.096827},
       nuevo:true,
       note:"60 m² con 3 habitaciones, 2 baños, 1 parqueadero en Las Ferias. Piso 16.",
-      flags:[{t:"Ascensor confirmado en la ficha.", s:"ok"}] },
+      flags:[{t:"A 12 minutos de El Tiempo en hora pico.", s:"ok"},{t:"Ascensor confirmado en la ficha.", s:"ok"}] },
     { op:"venta", barrio:"Normandía Occidental", canon:425000000, admin:null, m2:62, hab:3, ban:2, parq:1, dep:null,
       estrato:null, piso:null, asc:"nd", src:"Metrocuadrado", date:null, pub:"Metrocuadrado", inc:[],
       lat:4.67645, lon:-74.10745, approx:false, url:"/inmueble/venta-apartamento-bogota-normandia-occidental-3-habitaciones-2-banos-1-garajes/14876-M6550445", img:"https://multimedia.metrocuadrado.com/14876-M6550445/14876-M6550445_21_x.jpg",
@@ -3448,6 +3460,8 @@
       estrato:null, piso:null, asc:"nd", src:"Ciencuadras", date:null, pub:"Ciencuadras", inc:["hab","parq"],
       lat:4.62591, lon:-74.124747, approx:false, url:"/inmueble/apartamento-en-venta-en-la-igualdad-bogota-3814368", img:"https://www-img-cc.s3.amazonaws.com/inmuebles/images/3814368/aebb_178512877167_plana.jpeg",
       dist:{familia:1.86,tiempo:4.25},
+      via:{tiempo:24,familia:16}, semana:152,
+      sv:{f:"2025-03", lat:4.625497, lon:-74.124032},
       nuevo:true,
       note:"62,5 m² con habitaciones sin dato, 2 baños en La Igualdad.",
       flags:[{t:"El aviso no publica cuántas habitaciones tiene.", s:"crit"},{t:"El aviso no dice si tiene parqueadero.", s:"warn"}] },
