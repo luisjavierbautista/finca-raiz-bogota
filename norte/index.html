@@ -309,7 +309,7 @@
   <div class="verdict">
     <h2>Qué cambió</h2>
     <p id="auto-resumen">
-      El barrido del 15 sep 2026 deja <strong>75 candidatos vigentes</strong>: 10 que no estaban en la corrida anterior y 8 que se cayeron de los portales. El más económico que entró está en Iberia: 110 m² por <strong>$3.800.000</strong>. Solo <strong>28 de 75</strong> declaran ascensor en la ficha: el resto quedan marcados como sin confirmar, no como sin ascensor. En tiempos de viaje, el mejor ubicado es <strong>Santa Bárbara</strong>: 20 minutos a Colegio y 24 minutos a Oficina, para un total de 3h17 por semana solo de ida. Entre los nuevos y caídos de hoy hay un caso repetido, no dos apartamentos distintos: el aviso de Pontevedra <strong>194034597</strong> bajó de $4.500.000 a $4.400.000 y su área pasó de 117 a 118 m², lo que rompió el emparejamiento por coordenada y área y lo hizo contar como nuevo y como caído a la vez.
+      El barrido del 15 sep 2026 deja <strong>75 candidatos vigentes</strong>: 10 que no estaban en la corrida anterior y 8 que se cayeron de los portales. El más económico que entró está en Iberia: 110 m² por <strong>$3.800.000</strong>. Solo <strong>28 de 75</strong> declaran ascensor en la ficha: el resto quedan marcados como sin confirmar, no como sin ascensor. En tiempos de viaje, el mejor ubicado es <strong>Santa Bárbara</strong>: 20 minutos a Colegio y 24 minutos a Oficina, para un total de 3h17 por semana solo de ida.
     </p>
     <p>
       Los portales publican el mismo apartamento con precios y datos distintos, así que cada aviso se deduplica por coordenada y área, no por enlace. La cifra grande de cada ficha es el <strong>costo mensual total</strong>: en Suba la mayoría incluye la administración en el canon y en Usaquén casi siempre va aparte, y compararlos por canon llevaría a escoger mal. Los tiempos de viaje son en carro, con el tráfico previsto por Google para el día y la hora reales de cada compromiso. El del colegio es referencia comparativa entre apartamentos, no el tiempo de la ruta escolar, que recoge a otros niños y depende de cuál les asignen.
@@ -459,9 +459,9 @@
                 "Ciencuadras":"https://www.ciencuadras.com", "Properati":"https://www.properati.com.co" };
   function linkOf(d) { return (BASES[d.src] || BASES["Fincaraíz"]) + d.url; }
 
-  var CARTO_KEY = "";
+  var CARTO_KEY = "cb1_2i4b_1_7033d48a7cca7cc2e3a223cf";
 
-  var SV_KEY = "";
+  var SV_KEY = "AIzaSyBf-KHphnkdiM0rLRysrLwcFeQgm1937k8";
 
   var FECHA_CORRIDA = "15 sep 2026";
 
@@ -559,6 +559,8 @@
       estrato:null, piso:null, asc:"nd", src:"Ciencuadras", date:null, pub:"Ciencuadras", inc:["hab","parq"],
       lat:4.732489, lon:-74.074614, approx:false, url:"/inmueble/apartamento-en-arriendo-en-iberia-bogota-3876755", img:"https://www-img-cc.s3.amazonaws.com/inmuebles/images/3876755/aaa__178942583026_plana.jpeg",
       dist:{casa:5.13},
+      via:{gimnasio:25,musica:22,teatro:22,colegio:30,oficina:35}, semana:332,
+      sv:{f:"2025-01", lat:4.732564, lon:-74.074697},
       nuevo:true,
       note:"110 m² con habitaciones sin dato, 2 baños en Iberia.",
       flags:[{t:"El aviso no informa la administración.", s:"crit"}] },
@@ -574,6 +576,8 @@
       estrato:"4", piso:"3", asc:"si", src:"Fincaraíz", date:"2025-08-26", pub:"diana amaya", inc:[],
       lat:4.6979002, lon:-74.0747166, approx:false, url:"/apartamento-en-arriendo-en-pontevedra-bogota/192795399", img:"https://cdn2.infocasas.com.uy/repo/img/68ae55a25280e_infocdn__ahsfbwwydqvi6m5epqgxj6uagumndgyd4f3skthmjpg.jpg",
       dist:{casa:4.63},
+      via:{gimnasio:16,musica:15,teatro:12,colegio:31,oficina:23}, semana:272,
+      sv:{f:"2021-04", lat:4.6979, lon:-74.074717},
       nuevo:true,
       note:"100 m² con 3 habitaciones, 2 baños, 2 parqueaderos en Pontevedra. Piso 3.",
       flags:[{t:"Ascensor confirmado en la ficha.", s:"ok"}] },
@@ -770,6 +774,8 @@
       estrato:"5", piso:"6", asc:"nd", src:"Fincaraíz", date:"2026-09-14", pub:"Cazus propiedades", inc:[],
       lat:4.700322102225, lon:-74.077870845795, approx:false, url:"/apartamento-en-arriendo-en-pontevedra-bogota/194254970", img:"https://cdn2.infocasas.com.uy/repo/img/6aa8918eeb77f_infocdn__gr185066220260914061853jpg.jpg",
       dist:{casa:4.91},
+      via:{gimnasio:17,musica:17,teatro:13,colegio:32,oficina:22}, semana:279,
+      sv:{f:"2025-03", lat:4.700384, lon:-74.077848},
       nuevo:true,
       note:"118 m² con 3 habitaciones, 3 baños, 2 parqueaderos en Pontevedra. Piso 6.",
       flags:[] },
@@ -858,9 +864,11 @@
       estrato:null, piso:null, asc:"nd", src:"Metrocuadrado", date:null, pub:"Metrocuadrado", inc:[],
       lat:4.700222015380859, lon:-74.05783081054688, approx:false, url:"/inmueble/arriendo-apartamento-bogota-monaco-3-habitaciones-3-banos-1-garajes/3312-M7053165", img:"https://multimedia.metrocuadrado.com/3312-M7053165/3312-M7053165_10_x.jpg",
       dist:{casa:2.77},
+      via:{gimnasio:10,musica:12,teatro:8,colegio:25,oficina:29}, semana:238,
+      sv:{f:"2025-01", lat:4.700004, lon:-74.057914},
       nuevo:true,
       note:"106 m² con 3 habitaciones, 3 baños, 1 parqueadero en Alhambra.",
-      flags:[] },
+      flags:[{t:"Colegio a 25 minutos, de lo mejor de la lista.", s:"ok"}] },
     { op:"arriendo", barrio:"Alhambra", canon:4540000, admin:0, m2:116, hab:5, ban:4, parq:1, dep:null,
       estrato:"5", piso:"5", asc:"si", src:"Fincaraíz", date:"2026-08-29", pub:"Alberto Alvarez Arriendos", inc:[],
       lat:4.704328, lon:-74.057184, approx:false, url:"/apartamento-en-arriendo-en-alhambra-bogota/194182591", img:"https://cdn2.infocasas.com.uy/repo/img/6a932c5b9e9de_infocdn__property-aa-95373-1jpg.jpg",
@@ -945,9 +953,11 @@
       estrato:null, piso:null, asc:"nd", src:"Metrocuadrado", date:null, pub:"Metrocuadrado", inc:[],
       lat:4.711377, lon:-74.051346, approx:false, url:"/inmueble/arriendo-apartamento-bogota-prados-de-la-calleja-3-habitaciones-4-banos-2-garajes/MC7052702", img:"https://multimedia.metrocuadrado.com/MC7052702/MC7052702_1_x.jpg",
       dist:{casa:1.87},
+      via:{gimnasio:16,musica:15,teatro:16,colegio:20,oficina:41}, semana:266,
+      sv:{f:"2025-02", lat:4.711377, lon:-74.051455},
       nuevo:true,
       note:"105 m² con 3 habitaciones, 4 baños, 2 parqueaderos en La Calleja.",
-      flags:[{t:"El aviso no informa la administración.", s:"crit"},{t:"A 1,9 km de tu casa actual.", s:"ok"}] },
+      flags:[{t:"Colegio a 20 minutos, de lo mejor de la lista.", s:"ok"},{t:"La oficina en Fontibón queda a 41 minutos en pico.", s:"warn"},{t:"El aviso no informa la administración.", s:"crit"},{t:"A 1,9 km de tu casa actual.", s:"ok"}] },
     { op:"arriendo", barrio:"Santa Bárbara Occidental", canon:3000000, admin:1800000, m2:123, hab:3, ban:3, parq:2, dep:null,
       estrato:null, piso:null, asc:"nd", src:"Metrocuadrado", date:null, pub:"Metrocuadrado", inc:[],
       lat:4.701096534729004, lon:-74.05095672607422, approx:false, url:"/inmueble/arriendo-apartamento-bogota-santa-barbara-occidental-3-habitaciones-3-banos-2-garajes/18574-M6684079", img:"https://multimedia.metrocuadrado.com/18574-M6684079/18574-M6684079_9_x.jpg",
@@ -1058,9 +1068,11 @@
       estrato:null, piso:null, asc:"nd", src:"Ciencuadras", date:null, pub:"Ciencuadras", inc:["hab","parq"],
       lat:4.673606, lon:-74.057652, approx:false, url:"/inmueble/apartamento-en-arriendo-en-antiguo-country-bogota-3406254", img:"https://www-img-cc.s3.amazonaws.com/inmuebles/images/3406254/acdcdfb__17865677734_plana.jpeg",
       dist:{casa:4.71},
+      via:{gimnasio:15,musica:7,teatro:8,colegio:26,oficina:29}, semana:248,
+      sv:{f:"2025-02", lat:4.673594, lon:-74.057572},
       nuevo:true,
       note:"100 m² con habitaciones sin dato, 3 baños en Country.",
-      flags:[{t:"El aviso no informa la administración.", s:"crit"},{t:"Queda en el tope de $5.000.000.", s:"warn"}] },
+      flags:[{t:"Colegio a 26 minutos, de lo mejor de la lista.", s:"ok"},{t:"El aviso no informa la administración.", s:"crit"},{t:"Queda en el tope de $5.000.000.", s:"warn"}] },
     { op:"arriendo", barrio:"Bella Suiza", canon:5000000, admin:null, m2:105, hab:0, ban:3, parq:0, dep:null,
       estrato:null, piso:null, asc:"nd", src:"Ciencuadras", date:null, pub:"Ciencuadras", inc:["hab","parq"],
       lat:4.70495, lon:-74.03031, approx:false, url:"/inmueble/apartamento-en-arriendo-en-bella-suiza-bogota-3748534", img:"https://www-img-cc.s3.amazonaws.com/inmuebles/images/3748534/aab__178115111579_plana.jpeg",
