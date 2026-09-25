@@ -149,7 +149,7 @@
   "h1": "Quedan <em>{dias} días</em> para entregar el 803",
   "h1_ultimo_dia": "<em>Hoy</em> se entrega el 803",
   "h1_vencido": "El 803 se entregó hace <em>{dias_pasados} días</em>",
-  "deck": "Barrido completo de {portales} sobre tus barrios. La entrega del apartamento actual es el <strong>{fecha_limite_larga}</strong>."
+  "deck": "Barrido completo de {portales} sobre tus barrios. La entrega material del apartamento actual es el <strong>{fecha_limite_larga}</strong>, y el canon, la administración y los servicios deben quedar a paz y salvo hasta el <strong>12 de octubre</strong>."
  },
  "reglas": [
   {
@@ -220,7 +220,7 @@
   "titulo": "Arriendo en el norte",
   "que": "Mínimo 100 m², 3 habitaciones, parqueadero y ascensor, hasta $5.000.000 de canon más administración. Con tiempos de viaje al colegio, la oficina, el gimnasio, música y teatro."
  },
- "fecha_limite": "2026-10-11",
+ "fecha_limite": "2026-10-13",
  "alias": {
   "santa barbara": "Santa Bárbara",
   "santa barbara central": "Santa Bárbara Central",

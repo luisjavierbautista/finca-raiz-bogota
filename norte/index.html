@@ -183,6 +183,30 @@
   .favs .sello.muerto { background:var(--crit-bg); color:var(--crit); }
   .favs .sello.duda { background:var(--warn-bg); color:var(--warn); }
   .favs a { margin-left:auto; }
+  /* Condiciones de entrega del 803, según la carta de Teleport del 21-jul-2026. */
+  .entrega { border:1px solid var(--line); border-radius:12px; background:var(--surface);
+             padding:24px 24px 20px; margin:36px 0 0; }
+  .entrega h2 { margin:0; font-size:23px; }
+  .entrega .fechas { display:flex; flex-wrap:wrap; gap:0; margin:16px 0 0;
+    border:1px solid var(--line-soft); border-radius:9px; overflow:hidden; }
+  .entrega .fechas div { flex:1 1 170px; padding:12px 16px; border-right:1px solid var(--line-soft); }
+  .entrega .fechas div:last-child { border-right:none; }
+  .entrega .fechas .k { font-family:var(--sans); font-size:10.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--muted); }
+  .entrega .fechas .v { font-family:var(--sans); font-size:15px; font-weight:600; margin-top:4px; }
+  .entrega .fechas .v em { font-style:normal; color:var(--accent); }
+  .chequeo { list-style:none; margin:18px 0 0; padding:0; display:grid; gap:2px; }
+  .chequeo li { display:flex; gap:12px; align-items:flex-start; padding:11px 12px;
+    border-radius:8px; font-family:var(--sans); font-size:14.5px; line-height:1.5; }
+  .chequeo li:hover { background:var(--surface-2); }
+  .chequeo input { margin:3px 0 0; width:17px; height:17px; flex:none; accent-color:var(--accent);
+    cursor:pointer; }
+  .chequeo label { cursor:pointer; color:var(--ink-soft); }
+  .chequeo input:checked + label { color:var(--muted); text-decoration:line-through;
+    text-decoration-color:var(--line); }
+  .chequeo b { color:var(--ink); font-weight:600; }
+  .entrega .pie-nota { font-family:var(--sans); font-size:12.5px; color:var(--muted);
+    margin:16px 0 0; }
   @media (max-width:640px) { .masthead { padding-top:36px; } .controls { position:static; } .grid { grid-template-columns:1fr; } }
 
   /* ---------- mapa real ---------- */
@@ -287,9 +311,9 @@
 <div class="wrap">
   <header class="masthead">
     <div class="eyebrow">Búsqueda de arriendo · Bogotá norte · 3 portales · actualizado 25 sep 2026</div>
-    <h1>Quedan <em>16 días</em> para entregar el 803</h1>
+    <h1>Quedan <em>18 días</em> para entregar el 803</h1>
     <p class="deck">
-      Barrido completo de Fincaraíz, Metrocuadrado y Ciencuadras sobre tus barrios. La entrega del apartamento actual es el <strong>11 de octubre de 2026</strong>.
+      Barrido completo de Fincaraíz, Metrocuadrado y Ciencuadras sobre tus barrios. La entrega material del apartamento actual es el <strong>13 de octubre de 2026</strong>, y el canon, la administración y los servicios deben quedar a paz y salvo hasta el <strong>12 de octubre</strong>.
     </p>
     <ul class="criteria">
       <li>arriendo</li><li>≥ 100 m²</li><li>3+ habitaciones</li><li>≥ 1 parqueadero</li>
@@ -315,6 +339,28 @@
       Los portales publican el mismo apartamento con precios y datos distintos, así que cada aviso se deduplica por coordenada y área, no por enlace. La cifra grande de cada ficha es el <strong>costo mensual total</strong>: en Suba la mayoría incluye la administración en el canon y en Usaquén casi siempre va aparte, y compararlos por canon llevaría a escoger mal. Los tiempos de viaje son en carro, con el tráfico previsto por Google para el día y la hora reales de cada compromiso. El del colegio es referencia comparativa entre apartamentos, no el tiempo de la ruta escolar, que recoge a otros niños y depende de cuál les asignen.
     </p>
   </div>
+
+<section class="entrega" id="entrega">
+    <h2>La entrega del 803</h2>
+    <div class="fechas">
+      <div><div class="k">Vencimiento del contrato</div><div class="v">12 de octubre de 2026</div></div>
+      <div><div class="k">Entrega material</div><div class="v"><em>13 de octubre de 2026</em></div></div>
+      <div><div class="k">Preentrega</div><div class="v">por coordinar con William Rivera</div></div>
+    </div>
+    <ul class="chequeo" id="chequeo">
+      <li><input type="checkbox" id="e1"><label for="e1"><b>Canon y administración a paz y salvo</b> hasta el 12 de octubre de 2026, la fecha de vencimiento del contrato.</label></li>
+      <li><input type="checkbox" id="e2"><label for="e2"><b>Servicios públicos a paz y salvo</b> hasta el 12 de octubre, incluidos los que se hayan instalado por cuenta propia.</label></li>
+      <li><input type="checkbox" id="e3"><label for="e3"><b>Copias de los servicios pagados de los últimos tres meses.</b> Con eso prorratean lo que falte por pagar, y hay que entregarlas <b>antes</b> de la entrega del inmueble.</label></li>
+      <li><input type="checkbox" id="e4"><label for="e4"><b>Agendar la visita de preentrega con William Rivera</b>, representante comercial de Teleport. Ahí se revisa el estado contra el inventario y se define la hora de la entrega.</label></li>
+      <li><input type="checkbox" id="e5"><label for="e5"><b>Inmueble en el mismo estado del inventario inicial.</b> Ese documento es el referente para el estado de conservación: paredes resanadas y pintadas del color original, y entrega conforme al inventario.</label></li>
+      <li><input type="checkbox" id="e6"><label for="e6"><b>Puerta de cocina y horno Challenger:</b> la carta deja constancia de que los instalaron nuevos, así que van a esperarlos en ese estado.</label></li>
+    </ul>
+    <p class="pie-nota">
+      Condiciones de la carta de Inmobiliaria Teleport del 21 de julio de 2026, firmada por Nancy
+      Patricia Cruz G. Las reformas hechas al inmueble quedan en pertenencia del propietario
+      (cláusula octava). Lo que marques se guarda en este navegador.
+    </p>
+  </section>
 
   <div class="controls">
     <div class="control-row">
@@ -1523,6 +1569,21 @@ var favsBox = document.getElementById("favs-body");
     focusCard(a.getAttribute("data-ficha"));
     if (window.markPin) markPin(a.getAttribute("data-ficha"));
   });
+
+/* La lista de entrega se guarda en el navegador: es del dueño de la página, no del barrido. */
+  (function () {
+    var KEY = "entrega-803";
+    var guardado = {};
+    try { guardado = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
+    var cajas = Array.prototype.slice.call(document.querySelectorAll("#chequeo input"));
+    cajas.forEach(function (c) {
+      c.checked = !!guardado[c.id];
+      c.addEventListener("change", function () {
+        guardado[c.id] = c.checked;
+        try { localStorage.setItem(KEY, JSON.stringify(guardado)); } catch (e) {}
+      });
+    });
+  })();
 
   var gb = document.getElementById("gone-body");
   GONE.forEach(function (r) {
