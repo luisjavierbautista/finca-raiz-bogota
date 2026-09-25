@@ -207,6 +207,22 @@
   .chequeo b { color:var(--ink); font-weight:600; }
   .entrega .pie-nota { font-family:var(--sans); font-size:12.5px; color:var(--muted);
     margin:16px 0 0; }
+  .servicios { width:100%; border-collapse:collapse; margin:16px 0 0;
+    font-family:var(--sans); font-size:14px; }
+  .servicios th { text-align:left; font-size:10.5px; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--muted); font-weight:600; padding:0 10px 8px; border-bottom:1px solid var(--line); }
+  .servicios td { padding:10px; border-bottom:1px solid var(--line-soft); vertical-align:top; }
+  .servicios tbody tr:last-child td { border-bottom:none; }
+  .servicios .serv { font-weight:600; color:var(--ink); }
+  .servicios .emp { display:block; font-size:12px; color:var(--muted); font-weight:400; }
+  .servicios td.chk { text-align:center; width:1%; white-space:nowrap; }
+  .servicios td.chk input { width:17px; height:17px; accent-color:var(--accent); cursor:pointer; }
+  .servicios .det { font-size:12.5px; color:var(--muted); }
+  .alerta-fecha { display:flex; gap:11px; align-items:flex-start; margin:18px 0 0; padding:13px 15px;
+    border-radius:9px; background:var(--warn-bg); font-family:var(--sans); font-size:13.5px;
+    line-height:1.5; color:var(--ink-soft); }
+  .alerta-fecha b { color:var(--ink); }
+  .alerta-fecha .i { color:var(--warn); font-weight:700; flex:none; }
   @media (max-width:640px) { .masthead { padding-top:36px; } .controls { position:static; } .grid { grid-template-columns:1fr; } }
 
   /* ---------- mapa real ---------- */
@@ -355,6 +371,50 @@
       <li><input type="checkbox" id="e5"><label for="e5"><b>Inmueble en el mismo estado del inventario inicial.</b> Ese documento es el referente para el estado de conservación: paredes resanadas y pintadas del color original, y entrega conforme al inventario.</label></li>
       <li><input type="checkbox" id="e6"><label for="e6"><b>Puerta de cocina y horno Challenger:</b> la carta deja constancia de que los instalaron nuevos, así que van a esperarlos en ese estado.</label></li>
     </ul>
+<h3 style="font-family:var(--sans);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:26px 0 0">Los servicios, uno por uno</h3>
+    <div class="table-scroll">
+      <table class="servicios">
+        <thead>
+          <tr><th>Servicio</th><th>Facturas abr–sep</th><th>Paz y salvo</th><th>El día de la entrega</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="serv">Energía<span class="emp">Enel Colombia · mensual</span></span></td>
+            <td class="chk"><input type="checkbox" id="s-enel-f"></td>
+            <td class="chk"><input type="checkbox" id="s-enel-p"></td>
+            <td><input type="checkbox" id="s-enel-l"> <span class="det">foto del contador con la lectura</span></td>
+          </tr>
+          <tr>
+            <td><span class="serv">Acueducto y alcantarillado<span class="emp">EAAB · bimestral</span></span></td>
+            <td class="chk"><input type="checkbox" id="s-eaab-f"></td>
+            <td class="chk"><input type="checkbox" id="s-eaab-p"></td>
+            <td><input type="checkbox" id="s-eaab-l"> <span class="det">foto del contador con la lectura</span></td>
+          </tr>
+          <tr>
+            <td><span class="serv">Gas natural<span class="emp">Vanti · mensual</span></span></td>
+            <td class="chk"><input type="checkbox" id="s-vanti-f"></td>
+            <td class="chk"><input type="checkbox" id="s-vanti-p"></td>
+            <td><input type="checkbox" id="s-vanti-l"> <span class="det">foto del contador con la lectura</span></td>
+          </tr>
+          <tr>
+            <td><span class="serv">Internet<span class="emp">Movistar · lo instalaste tú</span></span></td>
+            <td class="chk"><input type="checkbox" id="s-mov-f"></td>
+            <td class="chk"><input type="checkbox" id="s-mov-p"></td>
+            <td><input type="checkbox" id="s-mov-l"> <span class="det">cancelar y devolver el módem, con soporte</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alerta-fecha">
+      <span class="i">▲</span>
+      <span>La carta pide <b>tres meses</b> de facturas, pero tu contrato pide <b>seis, con quince días
+      de anticipación</b> para promediar el depósito: eso cae el <b>28 de septiembre</b>. Junta
+      abril–septiembre y quedas cubierto por los dos. Las lecturas de los contadores el día de la
+      entrega son lo que te protege del prorrateo: sin ellas, el consumo desde la última factura
+      hasta el 13 de octubre lo estiman ellos.</span>
+    </div>
+
     <p class="pie-nota">
       Condiciones de la carta de Inmobiliaria Teleport del 21 de julio de 2026, firmada por Nancy
       Patricia Cruz G. Las reformas hechas al inmueble quedan en pertenencia del propietario
@@ -1575,7 +1635,7 @@ var favsBox = document.getElementById("favs-body");
     var KEY = "entrega-803";
     var guardado = {};
     try { guardado = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
-    var cajas = Array.prototype.slice.call(document.querySelectorAll("#chequeo input"));
+    var cajas = Array.prototype.slice.call(document.querySelectorAll("#entrega input[type=checkbox]"));
     cajas.forEach(function (c) {
       c.checked = !!guardado[c.id];
       c.addEventListener("change", function () {
