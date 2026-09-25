@@ -142,6 +142,25 @@ def barrios_vacios(cfg, avisos):
     return vacios
 
 
+def pon_llave(html, nombre, valor):
+    """Escribe la llave solo si la tenemos; si no, respeta la que ya está.
+
+    No tener la variable de entorno significa «no la tengo», no «bórrala». El
+    agente que corre el barrido en la nube no las tiene, y al renderizar dejaba
+    las dos páginas sin mapa y sin Street View hasta que el GitHub Action, cinco
+    horas después, las reponía.
+    """
+    actual = re.search(r'var %s = "([^"]*)";' % nombre, html)
+    valor = (valor or "").strip()
+    if not valor:
+        if actual and not actual.group(1):
+            print("AVISO: %s quedó vacía y no hay valor para reponerla" % nombre,
+                  file=sys.stderr)
+        return html
+    return re.sub(r'var %s = "[^"]*";' % nombre, 'var %s = "%s";' % (nombre, valor),
+                  html, count=1)
+
+
 def primera(avisos, nuevos, caidos):
     """¿Es el primer barrido de esta búsqueda? Entonces todo aparece como nuevo."""
     return bool(avisos) and len(nuevos) == len(avisos) and not caidos
@@ -416,13 +435,11 @@ def main():
     # Llave de Maps Embed API: es publica por diseno y debe estar restringida por
     # dominio en Google Cloud. Si no esta configurada, la ficha abre Street View
     # en otra pestana en vez de incrustarlo.
-    sv = os.environ.get("SV_EMBED_KEY", "").strip()
-    s = re.sub(r'var SV_KEY = "[^"]*";', 'var SV_KEY = "%s";' % sv, s, count=1)
-    # Llave de CARTO Basemaps: tambien es publica por diseno (viaja en la URL de cada
-    # tile) y se restringe por dominio en el panel de CARTO. Sin ella el mapa carga
-    # igual, contra la cuota compartida y sin garantia de servicio.
-    carto = os.environ.get("CARTO_KEY", "").strip()
-    s = re.sub(r'var CARTO_KEY = "[^"]*";', 'var CARTO_KEY = "%s";' % carto, s, count=1)
+    # Las dos llaves del navegador son publicas por diseno (viajan en la URL de cada
+    # tile o de cada embed) y estan restringidas por dominio en su panel. Por eso
+    # viven en el HTML, y por eso hay que tener cuidado al reescribirlas.
+    s = pon_llave(s, "SV_KEY", os.environ.get("SV_EMBED_KEY"))
+    s = pon_llave(s, "CARTO_KEY", os.environ.get("CARTO_KEY"))
     s = re.sub(r'var FECHA_CORRIDA = "[^"]*";', 'var FECHA_CORRIDA = "%s";' % fecha, s, count=1)
 
     s = swap(s, "  var DATA = [", bloque_datos(cfg, avisos, nuevos, marcados))

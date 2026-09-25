@@ -204,7 +204,15 @@ export CARTO_KEY=...        # para renderizar en local con llave
 ```
 
 Sin la variable el mapa **carga igual**, pero contra la cuota compartida de CARTO y sin garantía de
-servicio: el `var CARTO_KEY = ""` de la página hace que la URL salga sin `?key=`.
+servicio: el `var CARTO_KEY = ""` de la página hace que la URL salga sin `?key=`, y CARTO devuelve
+tiles con la marca de agua «API KEY REQUIRED».
+
+**Renderizar sin la llave no la borra.** No tener la variable de entorno significa «no la tengo», no
+«bórrala». Es una distinción que costó: el agente de la nube renderiza a las 07:11 y no tiene las
+llaves, así que estaba publicando las dos páginas con `CARTO_KEY = ""` y `SV_KEY = ""` —mapa con
+marca de agua y Street View abriendo en otra pestaña— hasta que el GitHub Action las reponía cinco
+horas después. Ahora `pon_llave()` respeta la que ya está en el HTML y solo avisa por stderr si
+quedó vacía y no hay con qué reponerla.
 
 
 ## Recién aparecidos

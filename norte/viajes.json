@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-24",
+ "actualizado": "2026-09-25",
  "destinos": [
   {
    "clave": "gimnasio",
@@ -11,7 +11,7 @@
     4
    ],
    "hora": "16:30",
-   "salida_consultada": "2026-09-25T21:30:00Z"
+   "salida_consultada": "2026-09-28T21:30:00Z"
   },
   {
    "clave": "musica",
@@ -45,7 +45,7 @@
     4
    ],
    "hora": "07:15",
-   "salida_consultada": "2026-09-25T12:15:00Z"
+   "salida_consultada": "2026-09-28T12:15:00Z"
   },
   {
    "clave": "oficina",
@@ -57,7 +57,7 @@
     4
    ],
    "hora": "07:00",
-   "salida_consultada": "2026-09-25T12:00:00Z"
+   "salida_consultada": "2026-09-28T12:00:00Z"
   }
  ],
  "edificios": {
@@ -4298,6 +4298,33 @@
     "min": 42,
     "min_libre": 28,
     "km": 12.3
+   }
+  },
+  "4.6999|-74.0782": {
+   "gimnasio": {
+    "min": 17,
+    "min_libre": 16,
+    "km": 5.0
+   },
+   "musica": {
+    "min": 18,
+    "min_libre": 19,
+    "km": 5.9
+   },
+   "teatro": {
+    "min": 15,
+    "min_libre": 13,
+    "km": 3.3
+   },
+   "colegio": {
+    "min": 30,
+    "min_libre": 28,
+    "km": 15.7
+   },
+   "oficina": {
+    "min": 19,
+    "min_libre": 17,
+    "km": 7.0
    }
   }
  }
