@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-30",
+ "actualizado": "2026-10-01",
  "destinos": [
   {
    "clave": "tiempo",
@@ -10069,6 +10069,246 @@
     "min": 2,
     "min_libre": 2,
     "km": 0.7
+   }
+  },
+  "4.6270|-74.1398": {
+   "tiempo": {
+    "min": 32,
+    "min_libre": 18,
+    "km": 7.8
+   },
+   "familia": {
+    "min": 3,
+    "min_libre": 3,
+    "km": 1.0
+   }
+  },
+  "4.6775|-74.0935": {
+   "tiempo": {
+    "min": 12,
+    "min_libre": 11,
+    "km": 4.0
+   },
+   "familia": {
+    "min": 44,
+    "min_libre": 23,
+    "km": 9.7
+   }
+  },
+  "4.6846|-74.1003": {
+   "tiempo": {
+    "min": 16,
+    "min_libre": 15,
+    "km": 5.0
+   },
+   "familia": {
+    "min": 40,
+    "min_libre": 19,
+    "km": 8.9
+   }
+  },
+  "4.6171|-74.1450": {
+   "tiempo": {
+    "min": 35,
+    "min_libre": 22,
+    "km": 9.8
+   },
+   "familia": {
+    "min": 8,
+    "min_libre": 8,
+    "km": 2.8
+   }
+  },
+  "4.6762|-74.0922": {
+   "tiempo": {
+    "min": 10,
+    "min_libre": 9,
+    "km": 3.4
+   },
+   "familia": {
+    "min": 43,
+    "min_libre": 22,
+    "km": 9.5
+   }
+  },
+  "4.6601|-74.1219": {
+   "tiempo": {
+    "min": 18,
+    "min_libre": 14,
+    "km": 5.5
+   },
+   "familia": {
+    "min": 20,
+    "min_libre": 13,
+    "km": 5.4
+   }
+  },
+  "4.6624|-74.1290": {
+   "tiempo": {
+    "min": 24,
+    "min_libre": 17,
+    "km": 7.7
+   },
+   "familia": {
+    "min": 24,
+    "min_libre": 16,
+    "km": 7.1
+   }
+  },
+  "4.6646|-74.1281": {
+   "tiempo": {
+    "min": 20,
+    "min_libre": 15,
+    "km": 6.4
+   },
+   "familia": {
+    "min": 24,
+    "min_libre": 16,
+    "km": 6.7
+   }
+  },
+  "4.6420|-74.1502": {
+   "tiempo": {
+    "min": 39,
+    "min_libre": 24,
+    "km": 10.6
+   },
+   "familia": {
+    "min": 17,
+    "min_libre": 13,
+    "km": 4.6
+   }
+  },
+  "4.6747|-74.1031": {
+   "tiempo": {
+    "min": 13,
+    "min_libre": 9,
+    "km": 3.5
+   },
+   "familia": {
+    "min": 37,
+    "min_libre": 21,
+    "km": 8.9
+   }
+  },
+  "4.6375|-74.1514": {
+   "tiempo": {
+    "min": 35,
+    "min_libre": 21,
+    "km": 9.8
+   },
+   "familia": {
+    "min": 10,
+    "min_libre": 9,
+    "km": 3.3
+   }
+  },
+  "4.6789|-74.1129": {
+   "tiempo": {
+    "min": 18,
+    "min_libre": 14,
+    "km": 5.3
+   },
+   "familia": {
+    "min": 34,
+    "min_libre": 20,
+    "km": 8.3
+   }
+  },
+  "4.6584|-74.1283": {
+   "tiempo": {
+    "min": 27,
+    "min_libre": 18,
+    "km": 8.3
+   },
+   "familia": {
+    "min": 20,
+    "min_libre": 14,
+    "km": 5.9
+   }
+  },
+  "4.6587|-74.1277": {
+   "tiempo": {
+    "min": 27,
+    "min_libre": 19,
+    "km": 8.4
+   },
+   "familia": {
+    "min": 19,
+    "min_libre": 13,
+    "km": 5.6
+   }
+  },
+  "4.6147|-74.1299": {
+   "tiempo": {
+    "min": 30,
+    "min_libre": 18,
+    "km": 7.3
+   },
+   "familia": {
+    "min": 11,
+    "min_libre": 8,
+    "km": 2.3
+   }
+  },
+  "4.6146|-74.1296": {
+   "tiempo": {
+    "min": 30,
+    "min_libre": 18,
+    "km": 7.1
+   },
+   "familia": {
+    "min": 10,
+    "min_libre": 8,
+    "km": 2.3
+   }
+  },
+  "4.6139|-74.1308": {
+   "tiempo": {
+    "min": 30,
+    "min_libre": 19,
+    "km": 7.3
+   },
+   "familia": {
+    "min": 10,
+    "min_libre": 8,
+    "km": 2.3
+   }
+  },
+  "4.6726|-74.1218": {
+   "tiempo": {
+    "min": 17,
+    "min_libre": 12,
+    "km": 5.4
+   },
+   "familia": {
+    "min": 31,
+    "min_libre": 18,
+    "km": 7.8
+   }
+  },
+  "4.6487|-74.1085": {
+   "tiempo": {
+    "min": 10,
+    "min_libre": 8,
+    "km": 3.1
+   },
+   "familia": {
+    "min": 28,
+    "min_libre": 15,
+    "km": 6.2
+   }
+  },
+  "4.6525|-74.1299": {
+   "tiempo": {
+    "min": 23,
+    "min_libre": 15,
+    "km": 5.9
+   },
+   "familia": {
+    "min": 16,
+    "min_libre": 10,
+    "km": 4.1
    }
   }
  }
