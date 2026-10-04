@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-03",
+ "actualizado": "2026-10-04",
  "destinos": [
   {
    "clave": "tiempo",
@@ -10585,6 +10585,30 @@
     "min": 9,
     "min_libre": 9,
     "km": 2.7
+   }
+  },
+  "4.6238|-74.1585": {
+   "tiempo": {
+    "min": 31,
+    "min_libre": 22,
+    "km": 10.1
+   },
+   "familia": {
+    "min": 10,
+    "min_libre": 10,
+    "km": 2.7
+   }
+  },
+  "4.6431|-74.1442": {
+   "tiempo": {
+    "min": 28,
+    "min_libre": 19,
+    "km": 8.7
+   },
+   "familia": {
+    "min": 11,
+    "min_libre": 10,
+    "km": 3.3
    }
   }
  }
