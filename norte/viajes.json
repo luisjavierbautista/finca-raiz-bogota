@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-17",
+ "actualizado": "2026-10-18",
  "destinos": [
   {
    "clave": "gimnasio",
@@ -6809,6 +6809,33 @@
     "min": 38,
     "min_libre": 24,
     "km": 10.8
+   }
+  },
+  "4.7199|-74.0584": {
+   "gimnasio": {
+    "min": 15,
+    "min_libre": 13,
+    "km": 5.2
+   },
+   "musica": {
+    "min": 14,
+    "min_libre": 14,
+    "km": 6.8
+   },
+   "teatro": {
+    "min": 13,
+    "min_libre": 10,
+    "km": 4.4
+   },
+   "colegio": {
+    "min": 21,
+    "min_libre": 17,
+    "km": 10.7
+   },
+   "oficina": {
+    "min": 43,
+    "min_libre": 29,
+    "km": 12.1
    }
   }
  }
