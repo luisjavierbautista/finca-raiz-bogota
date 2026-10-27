@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-26",
+ "generado": "2026-10-27",
  "busqueda": "norte",
  "avisos": [
   {
@@ -79,28 +79,28 @@
   },
   {
    "op": "arriendo",
-   "barrio": "Santa Bárbara Central",
-   "canon": 3500000,
-   "admin": 0,
-   "m2": 100.0,
+   "barrio": "Alhambra",
+   "canon": 3046000,
+   "admin": 554000,
+   "m2": 105.9,
    "hab": 3,
    "ban": 2,
    "parq": 1,
-   "estrato": "6",
+   "estrato": null,
    "piso": null,
    "asc": "nd",
-   "src": "Fincaraíz",
-   "url": "/apartamento-en-arriendo-en-santa-barbara-central-bogota/194357212",
-   "lat": 4.7042101,
-   "lon": -74.0538397,
-   "img": "",
-   "date": "2026-10-05",
-   "pub": "CFR Colombiana de Finca Raiz SAS",
-   "total": 3500000,
+   "src": "Metrocuadrado",
+   "url": "/inmueble/arriendo-apartamento-bogota-monaco-3-habitaciones-2-banos-1-garajes/4698-M7188645",
+   "lat": 4.700222015380859,
+   "lon": -74.05783081054688,
+   "img": "https://multimedia.metrocuadrado.com/4698-M7188645/4698-M7188645_16_x.jpg",
+   "date": null,
+   "pub": "Metrocuadrado",
+   "total": 3600000,
    "dist": {
-    "casa": 2.21
+    "casa": 2.77
    },
-   "km": 2.21
+   "km": 2.77
   },
   {
    "op": "arriendo",
@@ -236,6 +236,31 @@
    "barrio": "Niza",
    "canon": 3800000,
    "admin": 0,
+   "m2": 100.0,
+   "hab": 3,
+   "ban": 2,
+   "parq": 1,
+   "estrato": "5",
+   "piso": "2",
+   "asc": "nd",
+   "src": "Fincaraíz",
+   "url": "/apartamento-en-arriendo-en-niza-norte-bogota/194163354",
+   "lat": 4.711851959448,
+   "lon": -74.074420134572,
+   "img": "https://cdn2.infocasas.com.uy/repo/img/6abbd8559949c_infocdn__1144057042-1-1787682232jpg.jpg",
+   "date": "2026-08-25",
+   "pub": "G15 Grupo Inmobiliario",
+   "total": 3800000,
+   "dist": {
+    "casa": 4.43
+   },
+   "km": 4.43
+  },
+  {
+   "op": "arriendo",
+   "barrio": "Niza",
+   "canon": 3800000,
+   "admin": 0,
    "m2": 170.0,
    "hab": 3,
    "ban": 2,
@@ -280,31 +305,6 @@
     "casa": 4.63
    },
    "km": 4.63
-  },
-  {
-   "op": "arriendo",
-   "barrio": "Niza",
-   "canon": 3800000,
-   "admin": 0,
-   "m2": 100.0,
-   "hab": 3,
-   "ban": 2,
-   "parq": 1,
-   "estrato": "5",
-   "piso": "2",
-   "asc": "nd",
-   "src": "Fincaraíz",
-   "url": "/apartamento-en-arriendo-en-niza-norte-bogota/194163354",
-   "lat": 4.711851959448,
-   "lon": -74.074420134572,
-   "img": "https://cdn2.infocasas.com.uy/repo/img/6abbd8559949c_infocdn__1144057042-1-1787682232jpg.jpg",
-   "date": "2026-08-25",
-   "pub": "G15 Grupo Inmobiliario",
-   "total": 3800000,
-   "dist": {
-    "casa": 4.43
-   },
-   "km": 4.43
   },
   {
    "op": "arriendo",
@@ -355,35 +355,6 @@
     "casa": 3.77
    },
    "km": 3.77
-  },
-  {
-   "op": "arriendo",
-   "barrio": "Santa Bárbara Occidental",
-   "canon": 3800000,
-   "admin": null,
-   "m2": 100.0,
-   "hab": 0,
-   "ban": 2,
-   "parq": 0,
-   "inc": [
-    "hab",
-    "parq"
-   ],
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Ciencuadras",
-   "url": "/inmueble/apartamento-en-arriendo-en-santa-barbara-occidental-bogota-3896394",
-   "lat": 4.701266,
-   "lon": -74.054162,
-   "img": "https://www-img-cc.s3.amazonaws.com/inmuebles/images/3896394/adbddab__179277359467_plana.jpeg",
-   "date": null,
-   "pub": "Ciencuadras",
-   "total": 3800000,
-   "dist": {
-    "casa": 2.35
-   },
-   "km": 2.35
   },
   {
    "op": "arriendo",
@@ -555,7 +526,7 @@
    "url": "/apartamento-en-arriendo-en-colina-campestre-bogota/194199522",
    "lat": 4.7320277,
    "lon": -74.0651862,
-   "img": "https://cdn2.infocasas.com.uy/repo/img/6ad940b3bb67b_infocdn__7268301-1-1791219984-1jpg.jpg",
+   "img": "https://cdn2.infocasas.com.uy/repo/img/6adff1f5d6674_infocdn__7268301-1-1791219984-1jpg.jpg",
    "date": "2026-09-02",
    "pub": "RV INMOBILIARIA",
    "total": 4000000,
@@ -569,7 +540,36 @@
    "barrio": "Pasadena",
    "canon": 4000000,
    "admin": null,
-   "m2": 113.46,
+   "m2": 113.0,
+   "hab": 0,
+   "ban": 3,
+   "parq": 0,
+   "inc": [
+    "hab",
+    "parq"
+   ],
+   "estrato": null,
+   "piso": null,
+   "asc": "nd",
+   "src": "Ciencuadras",
+   "url": "/inmueble/apartamento-en-arriendo-en-pasadena-bogota-3361704",
+   "lat": 4.691749,
+   "lon": -74.065923,
+   "img": "https://www-img-cc.s3.amazonaws.com/inmuebles/images/3361704/adbd__179276283487_plana.jpeg",
+   "date": null,
+   "pub": "Ciencuadras",
+   "total": 4000000,
+   "dist": {
+    "casa": 3.99
+   },
+   "km": 3.99
+  },
+  {
+   "op": "arriendo",
+   "barrio": "Santa Bárbara Occidental",
+   "canon": 4000000,
+   "admin": null,
+   "m2": 100.0,
    "hab": 0,
    "ban": 2,
    "parq": 0,
@@ -581,17 +581,17 @@
    "piso": null,
    "asc": "nd",
    "src": "Ciencuadras",
-   "url": "/inmueble/apartamento-en-arriendo-en-pasadena-bogota-3896089",
-   "lat": 4.691749,
-   "lon": -74.065923,
-   "img": "https://www-img-cc.s3.amazonaws.com/inmuebles/images/3896089/adfb__179247224614_plana.jpeg",
+   "url": "/inmueble/apartamento-en-arriendo-en-santa-barbara-occidental-bogota-3912533",
+   "lat": 4.701266,
+   "lon": -74.054162,
+   "img": "https://www-img-cc.s3.amazonaws.com/inmuebles/images/3912533/adeef__179207560236_plana.jpeg",
    "date": null,
    "pub": "Ciencuadras",
    "total": 4000000,
    "dist": {
-    "casa": 3.99
+    "casa": 2.35
    },
-   "km": 3.99
+   "km": 2.35
   },
   {
    "op": "arriendo",
@@ -602,16 +602,16 @@
    "hab": 3,
    "ban": 2,
    "parq": 2,
-   "estrato": "4",
+   "estrato": null,
    "piso": null,
-   "asc": "si",
-   "src": "Fincaraíz",
-   "url": "/apartamento-en-arriendo-en-colina-campestre-bogota/194408020",
-   "lat": 4.744598,
-   "lon": -74.0666967,
-   "img": "",
-   "date": "2026-10-15",
-   "pub": "Rafael Angel H y Cia SAS.",
+   "asc": "nd",
+   "src": "Metrocuadrado",
+   "url": "/inmueble/arriendo-apartamento-bogota-colina-campestre-3-habitaciones-2-banos-2-garajes/35-M7153064",
+   "lat": 4.7446,
+   "lon": -74.0667,
+   "img": "https://multimedia.metrocuadrado.com/35-M7153064/35-M7153064_21_x.jpg",
+   "date": null,
+   "pub": "Metrocuadrado",
    "total": 4003000,
    "dist": {
     "casa": 5.28
@@ -642,6 +642,31 @@
     "casa": 3.84
    },
    "km": 3.84
+  },
+  {
+   "op": "arriendo",
+   "barrio": "Iberia",
+   "canon": 3600000,
+   "admin": 418000,
+   "m2": 122.0,
+   "hab": 3,
+   "ban": 3,
+   "parq": 2,
+   "estrato": null,
+   "piso": null,
+   "asc": "nd",
+   "src": "Metrocuadrado",
+   "url": "/inmueble/arriendo-apartamento-bogota-iberia-3-habitaciones-3-banos-2-garajes/5175-M7120361",
+   "lat": 4.71946,
+   "lon": -74.06733,
+   "img": "https://multimedia.metrocuadrado.com/5175-M7120361/5175-M7120361_21_x.jpg",
+   "date": null,
+   "pub": "Metrocuadrado",
+   "total": 4018000,
+   "dist": {
+    "casa": 3.8
+   },
+   "km": 3.8
   },
   {
    "op": "arriendo",
@@ -735,42 +760,17 @@
    "piso": "5",
    "asc": "si",
    "src": "Fincaraíz",
-   "url": "/apartamento-en-arriendo-en-bella-suiza-bogota/194427203",
+   "url": "/apartamento-en-arriendo-en-bella-suiza-bogota/194429282",
    "lat": 4.7046419615247,
    "lon": -74.030685424805,
-   "img": "https://cdn2.infocasas.com.uy/repo/img/69cbf816ab984_infocdn__property-aa-91663-1jpg.jpg",
-   "date": "2026-10-19",
+   "img": "",
+   "date": "2026-10-20",
    "pub": "Mubrick SAS",
    "total": 4200000,
    "dist": {
     "casa": 0.68
    },
    "km": 0.68
-  },
-  {
-   "op": "arriendo",
-   "barrio": "Santa Bárbara",
-   "canon": 3178000,
-   "admin": 1022000,
-   "m2": 101.0,
-   "hab": 3,
-   "ban": 3,
-   "parq": 1,
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Metrocuadrado",
-   "url": "/inmueble/arriendo-apartamento-bogota-mochuelo-norte-3-habitaciones-3-banos-1-garajes/23525-M6899163",
-   "lat": 4.693756580352783,
-   "lon": -74.03763580322266,
-   "img": "https://multimedia.metrocuadrado.com/23525-M6899163/23525-M6899163_1_x.jpg",
-   "date": null,
-   "pub": "Metrocuadrado",
-   "total": 4200000,
-   "dist": {
-    "casa": 1.76
-   },
-   "km": 1.76
   },
   {
    "op": "arriendo",
@@ -824,31 +824,6 @@
   },
   {
    "op": "arriendo",
-   "barrio": "Iberia",
-   "canon": 3800000,
-   "admin": 500000,
-   "m2": 122.0,
-   "hab": 3,
-   "ban": 3,
-   "parq": 2,
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Metrocuadrado",
-   "url": "/inmueble/arriendo-apartamento-bogota-iberia-3-habitaciones-3-banos-2-garajes/5175-M7120361",
-   "lat": 4.71946,
-   "lon": -74.06733,
-   "img": "https://multimedia.metrocuadrado.com/5175-M7120361/5175-M7120361_1_x.jpg",
-   "date": null,
-   "pub": "Metrocuadrado",
-   "total": 4300000,
-   "dist": {
-    "casa": 3.8
-   },
-   "km": 3.8
-  },
-  {
-   "op": "arriendo",
    "barrio": "Pontevedra",
    "canon": 4300000,
    "admin": 0,
@@ -896,85 +871,6 @@
     "casa": 4.6
    },
    "km": 4.6
-  },
-  {
-   "op": "arriendo",
-   "barrio": "Iberia",
-   "canon": 4300000,
-   "admin": null,
-   "m2": 114.0,
-   "hab": 4,
-   "ban": 3,
-   "parq": 2,
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Metrocuadrado",
-   "url": "/inmueble/arriendo-apartamento-bogota-iberia-4-habitaciones-3-banos-2-garajes/20041-M6803263",
-   "lat": 4.728023529052734,
-   "lon": -74.0684814453125,
-   "img": "https://multimedia.metrocuadrado.com/20041-M6803263/20041-M6803263_2_x.jpg",
-   "date": null,
-   "pub": "Metrocuadrado",
-   "total": 4300000,
-   "dist": {
-    "casa": 4.29
-   },
-   "km": 4.29
-  },
-  {
-   "op": "arriendo",
-   "barrio": "Santa Bárbara Central",
-   "canon": 4300000,
-   "admin": null,
-   "m2": 626.0,
-   "hab": 0,
-   "ban": 2,
-   "parq": 0,
-   "inc": [
-    "hab",
-    "parq"
-   ],
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Ciencuadras",
-   "url": "/inmueble/apartamento-en-arriendo-en-santa-barbara-central-bogota-3918900",
-   "lat": 4.699334,
-   "lon": -74.039718,
-   "img": "https://www-img-cc.s3.amazonaws.com/inmuebles/images/3918900/ade__179253356136_plana.jpeg",
-   "date": null,
-   "pub": "Ciencuadras",
-   "total": 4300000,
-   "dist": {
-    "casa": 1.25
-   },
-   "km": 1.25
-  },
-  {
-   "op": "arriendo",
-   "barrio": "Colina Campestre",
-   "canon": 3670000,
-   "admin": 653800,
-   "m2": 116.56,
-   "hab": 3,
-   "ban": 3,
-   "parq": 2,
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Metrocuadrado",
-   "url": "/inmueble/arriendo-apartamento-bogota-colina-campestre-3-habitaciones-3-banos-2-garajes/5031-M6963424",
-   "lat": 4.73979,
-   "lon": -74.06941,
-   "img": "https://multimedia.metrocuadrado.com/5031-M6963424/5031-M6963424_141_x.jpg",
-   "date": null,
-   "pub": "Metrocuadrado",
-   "total": 4323800,
-   "dist": {
-    "casa": 5.12
-   },
-   "km": 5.12
   },
   {
    "op": "arriendo",
@@ -1067,7 +963,7 @@
    "url": "/apartamento-en-arriendo-en-santa-barbara-central-bogota/194252794",
    "lat": 4.694912887502,
    "lon": -74.035939152369,
-   "img": "https://cdn2.infocasas.com.uy/repo/img/6abcb542a349f_infocdn__663-1-1789163759jpg.jpg",
+   "img": "https://cdn2.infocasas.com.uy/repo/img/6adf91ee6ad7f_infocdn__663-1-1789163759jpg.jpg",
    "date": "2026-09-14",
    "pub": "CENTRAL DE ARRENDAMIENTOS",
    "total": 4500000,
@@ -1075,31 +971,6 @@
     "casa": 1.61
    },
    "km": 1.61
-  },
-  {
-   "op": "arriendo",
-   "barrio": "Nueva Autopista",
-   "canon": 4500000,
-   "admin": 0,
-   "m2": 123.0,
-   "hab": 3,
-   "ban": 3,
-   "parq": 2,
-   "estrato": "5",
-   "piso": "5",
-   "asc": "si",
-   "src": "Fincaraíz",
-   "url": "/apartamento-en-arriendo-en-nueva-autopista-bogota/194350594",
-   "lat": 4.7221734,
-   "lon": -74.0504604,
-   "img": "https://cdn2.infocasas.com.uy/repo/img/6ac16bd9e7c75_infocdn__sih13cdyc69olyxbazqocizqltjacq6nvcwgkjvajpg.jpg",
-   "date": "2026-10-02",
-   "pub": "marleny mesa",
-   "total": 4500000,
-   "dist": {
-    "casa": 2.26
-   },
-   "km": 2.26
   },
   {
    "op": "arriendo",
@@ -1128,6 +999,31 @@
   },
   {
    "op": "arriendo",
+   "barrio": "Nueva Autopista",
+   "canon": 4500000,
+   "admin": 0,
+   "m2": 123.0,
+   "hab": 3,
+   "ban": 3,
+   "parq": 2,
+   "estrato": "5",
+   "piso": "5",
+   "asc": "si",
+   "src": "Fincaraíz",
+   "url": "/apartamento-en-arriendo-en-nueva-autopista-bogota/194350594",
+   "lat": 4.7221734,
+   "lon": -74.0504604,
+   "img": "https://cdn2.infocasas.com.uy/repo/img/6ac16bd9e7c75_infocdn__sih13cdyc69olyxbazqocizqltjacq6nvcwgkjvajpg.jpg",
+   "date": "2026-10-02",
+   "pub": "marleny mesa",
+   "total": 4500000,
+   "dist": {
+    "casa": 2.26
+   },
+   "km": 2.26
+  },
+  {
+   "op": "arriendo",
    "barrio": "Colina Campestre",
    "canon": 4500000,
    "admin": 0,
@@ -1150,31 +1046,6 @@
     "casa": 4.71
    },
    "km": 4.71
-  },
-  {
-   "op": "arriendo",
-   "barrio": "Pontevedra",
-   "canon": 3300000,
-   "admin": 1200000,
-   "m2": 117.0,
-   "hab": 3,
-   "ban": 3,
-   "parq": 2,
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Metrocuadrado",
-   "url": "/inmueble/arriendo-apartamento-bogota-pontevedra-3-habitaciones-3-banos-2-garajes/18948-M7085787",
-   "lat": 4.6999211,
-   "lon": -74.0781921,
-   "img": "https://multimedia.metrocuadrado.com/18948-M7085787/18948-M7085787_21_x.jpg",
-   "date": null,
-   "pub": "Metrocuadrado",
-   "total": 4500000,
-   "dist": {
-    "casa": 4.95
-   },
-   "km": 4.95
   },
   {
    "op": "arriendo",
@@ -1253,6 +1124,56 @@
   },
   {
    "op": "arriendo",
+   "barrio": "Pontevedra",
+   "canon": 3300000,
+   "admin": 1200000,
+   "m2": 117.0,
+   "hab": 3,
+   "ban": 3,
+   "parq": 2,
+   "estrato": null,
+   "piso": null,
+   "asc": "nd",
+   "src": "Metrocuadrado",
+   "url": "/inmueble/arriendo-apartamento-bogota-pontevedra-3-habitaciones-3-banos-2-garajes/18948-M7085787",
+   "lat": 4.6999211,
+   "lon": -74.0781921,
+   "img": "https://multimedia.metrocuadrado.com/18948-M7085787/18948-M7085787_21_x.jpg",
+   "date": null,
+   "pub": "Metrocuadrado",
+   "total": 4500000,
+   "dist": {
+    "casa": 4.95
+   },
+   "km": 4.95
+  },
+  {
+   "op": "arriendo",
+   "barrio": "Santa Bárbara Central",
+   "canon": 4500000,
+   "admin": null,
+   "m2": 100.0,
+   "hab": 3,
+   "ban": 2,
+   "parq": 1,
+   "estrato": null,
+   "piso": null,
+   "asc": "nd",
+   "src": "Metrocuadrado",
+   "url": "/inmueble/arriendo-apartamento-bogota-3-habitaciones-2-banos-1-garajes/20449-M7014239",
+   "lat": 4.697168827056885,
+   "lon": -74.03388214111328,
+   "img": "https://multimedia.metrocuadrado.com/20449-M7014239/20449-M7014239_1_x.jpg",
+   "date": null,
+   "pub": "Metrocuadrado",
+   "total": 4500000,
+   "dist": {
+    "casa": 1.35
+   },
+   "km": 1.35
+  },
+  {
+   "op": "arriendo",
    "barrio": "Santa Ana",
    "canon": 4500000,
    "admin": null,
@@ -1275,35 +1196,6 @@
     "casa": 2.61
    },
    "km": 2.61
-  },
-  {
-   "op": "arriendo",
-   "barrio": "Santa Bárbara Central",
-   "canon": 4500000,
-   "admin": null,
-   "m2": 110.0,
-   "hab": 0,
-   "ban": 2,
-   "parq": 0,
-   "inc": [
-    "hab",
-    "parq"
-   ],
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Ciencuadras",
-   "url": "/inmueble/apartamento-en-arriendo-en-santa-barbara-central-bogota-3884218",
-   "lat": 4.695813,
-   "lon": -74.035039,
-   "img": "https://www-img-cc.s3.amazonaws.com/inmuebles/images/3884218/adde__179229422217_plana.jpeg",
-   "date": null,
-   "pub": "Ciencuadras",
-   "total": 4500000,
-   "dist": {
-    "casa": 1.5
-   },
-   "km": 1.5
   },
   {
    "op": "arriendo",
@@ -1461,35 +1353,6 @@
   },
   {
    "op": "arriendo",
-   "barrio": "Santa Bárbara Central",
-   "canon": 4600000,
-   "admin": null,
-   "m2": 110.0,
-   "hab": 0,
-   "ban": 2,
-   "parq": 0,
-   "inc": [
-    "hab",
-    "parq"
-   ],
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Ciencuadras",
-   "url": "/inmueble/apartamento-en-arriendo-en-santa-barbara-central-bogota-3365611",
-   "lat": 4.69385,
-   "lon": -74.034076,
-   "img": "https://www-img-cc.s3.amazonaws.com/inmuebles/images/3365611/eac_17490611391_plana.jpeg",
-   "date": null,
-   "pub": "Ciencuadras",
-   "total": 4600000,
-   "dist": {
-    "casa": 1.72
-   },
-   "km": 1.72
-  },
-  {
-   "op": "arriendo",
    "barrio": "Santa Ana",
    "canon": 4000000,
    "admin": 650000,
@@ -1512,31 +1375,6 @@
     "casa": 2.61
    },
    "km": 2.61
-  },
-  {
-   "op": "arriendo",
-   "barrio": "Colina Campestre",
-   "canon": 4700000,
-   "admin": null,
-   "m2": 114.0,
-   "hab": 3,
-   "ban": 3,
-   "parq": 2,
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Metrocuadrado",
-   "url": "/inmueble/arriendo-apartamento-bogota-el-plan-3-habitaciones-3-banos-2-garajes/MC7109897",
-   "lat": 4.7410574,
-   "lon": -74.06825,
-   "img": "https://multimedia.metrocuadrado.com/MC7109897/MC7109897_1_x.jpg",
-   "date": null,
-   "pub": "Metrocuadrado",
-   "total": 4700000,
-   "dist": {
-    "casa": 5.12
-   },
-   "km": 5.12
   },
   {
    "op": "arriendo",
@@ -1615,31 +1453,6 @@
   },
   {
    "op": "arriendo",
-   "barrio": "Pasadena",
-   "canon": 4800000,
-   "admin": 0,
-   "m2": 117.0,
-   "hab": 3,
-   "ban": 2,
-   "parq": 1,
-   "estrato": "5",
-   "piso": null,
-   "asc": "si",
-   "src": "Fincaraíz",
-   "url": "/apartamento-en-arriendo-en-pasadena-bogota/194395170",
-   "lat": 4.6896287,
-   "lon": -74.0611017,
-   "img": "",
-   "date": "2026-10-13",
-   "pub": "Cáceres \\u0026 Ferro Finca Raíz S.A",
-   "total": 4800000,
-   "dist": {
-    "casa": 3.67
-   },
-   "km": 3.67
-  },
-  {
-   "op": "arriendo",
    "barrio": "Colina Campestre",
    "canon": 4800000,
    "admin": 0,
@@ -1662,6 +1475,31 @@
     "casa": 4.02
    },
    "km": 4.02
+  },
+  {
+   "op": "arriendo",
+   "barrio": "Pasadena",
+   "canon": 4800000,
+   "admin": 0,
+   "m2": 117.0,
+   "hab": 3,
+   "ban": 2,
+   "parq": 1,
+   "estrato": "5",
+   "piso": null,
+   "asc": "si",
+   "src": "Fincaraíz",
+   "url": "/apartamento-en-arriendo-en-pasadena-bogota/194395170",
+   "lat": 4.6896287,
+   "lon": -74.0611017,
+   "img": "",
+   "date": "2026-10-13",
+   "pub": "Cáceres \\u0026 Ferro Finca Raíz S.A",
+   "total": 4800000,
+   "dist": {
+    "casa": 3.67
+   },
+   "km": 3.67
   },
   {
    "op": "arriendo",
@@ -1712,35 +1550,6 @@
     "casa": 2.75
    },
    "km": 2.75
-  },
-  {
-   "op": "arriendo",
-   "barrio": "Santa Bárbara Central",
-   "canon": 4800000,
-   "admin": null,
-   "m2": 155.0,
-   "hab": 0,
-   "ban": 3,
-   "parq": 0,
-   "inc": [
-    "hab",
-    "parq"
-   ],
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Ciencuadras",
-   "url": "/inmueble/apartamento-en-arriendo-en-santa-barbara-central-bogota-3633607",
-   "lat": 4.699623,
-   "lon": -74.041445,
-   "img": "https://www-img-cc.s3.amazonaws.com/inmuebles/images/3633607/aba__178421762718_plana.jpeg",
-   "date": null,
-   "pub": "Ciencuadras",
-   "total": 4800000,
-   "dist": {
-    "casa": 1.32
-   },
-   "km": 1.32
   },
   {
    "op": "arriendo",
@@ -1873,31 +1682,6 @@
   },
   {
    "op": "arriendo",
-   "barrio": "Santa Bárbara",
-   "canon": 5000000,
-   "admin": null,
-   "m2": 108.0,
-   "hab": 3,
-   "ban": 2,
-   "parq": 2,
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Metrocuadrado",
-   "url": "/inmueble/arriendo-apartamento-bogota-san-jose-de-usaquen-3-habitaciones-2-banos-2-garajes/MC7147674",
-   "lat": 4.7511797,
-   "lon": -74.03523,
-   "img": "https://multimedia.metrocuadrado.com/MC7147674/MC7147674_12_x.jpg",
-   "date": null,
-   "pub": "Metrocuadrado",
-   "total": 5000000,
-   "dist": {
-    "casa": 4.62
-   },
-   "km": 4.62
-  },
-  {
-   "op": "arriendo",
    "barrio": "Niza",
    "canon": 4042000,
    "admin": 958000,
@@ -1920,35 +1704,6 @@
     "casa": 5.04
    },
    "km": 5.04
-  },
-  {
-   "op": "arriendo",
-   "barrio": "San Patricio",
-   "canon": 5000000,
-   "admin": null,
-   "m2": 105.0,
-   "hab": 0,
-   "ban": 2,
-   "parq": 0,
-   "inc": [
-    "hab",
-    "parq"
-   ],
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Ciencuadras",
-   "url": "/inmueble/apartamento-en-arriendo-en-san-patricio-bogota-3910035",
-   "lat": 4.694296,
-   "lon": -74.052156,
-   "img": "https://www-img-cc.s3.amazonaws.com/inmuebles/images/3910035/acebbafad__179191289016_plana.jpeg",
-   "date": null,
-   "pub": "Ciencuadras",
-   "total": 5000000,
-   "dist": {
-    "casa": 2.57
-   },
-   "km": 2.57
   },
   {
    "op": "arriendo",
@@ -1991,7 +1746,7 @@
    "url": "/apartamento-en-arriendo-en-bella-suiza-bogota/194371901",
    "lat": 4.707310728127,
    "lon": -74.029538898743,
-   "img": "https://cdn2.infocasas.com.uy/repo/img/6ad7d65d79ebd_infocdn__2868025-1-1792520236jpg.jpg",
+   "img": "https://cdn2.infocasas.com.uy/repo/img/6ad7d65dd2197_infocdn__2868025-2-1792520236jpg.jpg",
    "date": "2026-10-07",
    "pub": "ALQUILANDO SAS",
    "total": 5040000,
@@ -2177,31 +1932,6 @@
   },
   {
    "op": "arriendo",
-   "barrio": "Santa Bárbara",
-   "canon": 5200000,
-   "admin": null,
-   "m2": 130.0,
-   "hab": 3,
-   "ban": 2,
-   "parq": 1,
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Metrocuadrado",
-   "url": "/inmueble/arriendo-apartamento-bogota-molinos-norte-edif-el-cairo-3-habitaciones-2-banos-1-garajes/MC6009224",
-   "lat": 4.6933737,
-   "lon": -74.04398,
-   "img": "https://multimedia.metrocuadrado.com/MC6009224/MC6009224_1_x.jpg",
-   "date": null,
-   "pub": "Metrocuadrado",
-   "total": 5200000,
-   "dist": {
-    "casa": 2.05
-   },
-   "km": 2.05
-  },
-  {
-   "op": "arriendo",
    "barrio": "Bella Suiza",
    "canon": 5200000,
    "admin": null,
@@ -2295,7 +2025,7 @@
    "url": "/apartamento-en-arriendo-en-pasadena-bogota/193947414",
    "lat": 4.6955357,
    "lon": -74.0829372,
-   "img": "https://cdn2.infocasas.com.uy/repo/img/6ac662556ed06_infocdn__gr191063120260702074051jpg.jpg",
+   "img": "https://cdn2.infocasas.com.uy/repo/img/6ae0154c8341c_infocdn__gr191063120260702074051jpg.jpg",
    "date": "2026-07-02",
    "pub": "D.C COLOMBIA S.A.S.",
    "total": 5386000,
@@ -2370,7 +2100,7 @@
    "url": "/inmueble/arriendo-apartamento-bogota-colina-campestre-3-habitaciones-2-banos-2-garajes/175-M7064826",
    "lat": 4.72944,
    "lon": -74.06375,
-   "img": "https://multimedia.metrocuadrado.com/175-M7064826/175-M7064826_1041_x.jpg",
+   "img": "https://multimedia.metrocuadrado.com/175-M7064826/175-M7064826_1073_x.jpg",
    "date": null,
    "pub": "Metrocuadrado",
    "total": 5400000,
@@ -2460,31 +2190,6 @@
   },
   {
    "op": "arriendo",
-   "barrio": "Niza",
-   "canon": 5500000,
-   "admin": 0,
-   "m2": 104.0,
-   "hab": 3,
-   "ban": 4,
-   "parq": 1,
-   "estrato": "4",
-   "piso": "5",
-   "asc": "si",
-   "src": "Fincaraíz",
-   "url": "/apartamento-en-arriendo-en-niza-bogota/194340487",
-   "lat": 4.7156914,
-   "lon": -74.0707892,
-   "img": "https://cdn2.infocasas.com.uy/repo/img/6abddf3763192_infocdn__oo1hxyxsbwtlpitfalmyqv3ig3zxaswmteiy1vpzjpg.jpg",
-   "date": "2026-09-30",
-   "pub": "CARLOS AUGUSTO GUZMAN",
-   "total": 5500000,
-   "dist": {
-    "casa": 4.08
-   },
-   "km": 4.08
-  },
-  {
-   "op": "arriendo",
    "barrio": "Las Villas",
    "canon": 4860000,
    "admin": 640000,
@@ -2502,6 +2207,31 @@
    "img": "https://cdn2.infocasas.com.uy/repo/img/6a8470313db9e_infocdn__v17qigwtmhtca4eeklsqro10x3zefmj3ldxplfpmjpg.jpg",
    "date": "2026-08-18",
    "pub": "ALU REAL ESTATE GROUP",
+   "total": 5500000,
+   "dist": {
+    "casa": 4.08
+   },
+   "km": 4.08
+  },
+  {
+   "op": "arriendo",
+   "barrio": "Niza",
+   "canon": 5500000,
+   "admin": 0,
+   "m2": 104.0,
+   "hab": 3,
+   "ban": 4,
+   "parq": 1,
+   "estrato": "4",
+   "piso": "5",
+   "asc": "si",
+   "src": "Fincaraíz",
+   "url": "/apartamento-en-arriendo-en-niza-bogota/194340487",
+   "lat": 4.7156914,
+   "lon": -74.0707892,
+   "img": "https://cdn2.infocasas.com.uy/repo/img/6abddf3763192_infocdn__oo1hxyxsbwtlpitfalmyqv3ig3zxaswmteiy1vpzjpg.jpg",
+   "date": "2026-09-30",
+   "pub": "CARLOS AUGUSTO GUZMAN",
    "total": 5500000,
    "dist": {
     "casa": 4.08
@@ -2585,6 +2315,31 @@
   },
   {
    "op": "arriendo",
+   "barrio": "Colina Campestre",
+   "canon": 5500000,
+   "admin": null,
+   "m2": 155.0,
+   "hab": 3,
+   "ban": 3,
+   "parq": 2,
+   "estrato": null,
+   "piso": null,
+   "asc": "nd",
+   "src": "Metrocuadrado",
+   "url": "/inmueble/arriendo-apartamento-bogota-el-plan-3-habitaciones-3-banos-2-garajes/MC7176647",
+   "lat": 4.7392344,
+   "lon": -74.06387,
+   "img": "https://multimedia.metrocuadrado.com/MC7176647/MC7176647_1_x.jpg",
+   "date": null,
+   "pub": "Metrocuadrado",
+   "total": 5500000,
+   "dist": {
+    "casa": 4.63
+   },
+   "km": 4.63
+  },
+  {
+   "op": "arriendo",
    "barrio": "San Patricio",
    "canon": 5500000,
    "admin": null,
@@ -2614,21 +2369,312 @@
   }
  ],
  "nuevos": [
-  "/inmueble/arriendo-apartamento-bogota-santa-helena-et-i-3-habitaciones-2-banos-2-garajes/2162-M7141495",
-  "/inmueble/arriendo-apartamento-bogota-san-jose-de-usaquen-3-habitaciones-2-banos-2-garajes/MC7147674",
-  "/inmueble/apartamento-en-arriendo-en-san-patricio-bogota-3910035",
-  "/inmueble/arriendo-apartamento-bogota-san-jose-del-prado-3-habitaciones-3-banos-2-garajes/2359-M6964543",
-  "/inmueble/arriendo-apartamento-bogota-casa-blanca-suba-3-habitaciones-3-banos-2-garajes/20030-M5972861",
-  "/inmueble/arriendo-apartamento-bogota-molinos-norte-edif-el-cairo-3-habitaciones-2-banos-1-garajes/MC6009224",
-  "/inmueble/arriendo-apartamento-bogota-mochuelo-norte-3-habitaciones-2-banos-2-garajes/17749-M7000303"
+  "/inmueble/arriendo-apartamento-bogota-monaco-3-habitaciones-2-banos-1-garajes/4698-M7188645",
+  "/inmueble/arriendo-apartamento-bogota-3-habitaciones-2-banos-1-garajes/20449-M7014239",
+  "/inmueble/arriendo-apartamento-bogota-el-plan-3-habitaciones-3-banos-2-garajes/MC7176647"
  ],
  "caidos": [
   {
    "op": "arriendo",
+   "barrio": "Santa Bárbara Central",
+   "canon": 3500000,
+   "admin": 0,
+   "m2": 100.0,
+   "hab": 3,
+   "ban": 2,
+   "parq": 1,
+   "estrato": "6",
+   "piso": null,
+   "asc": "nd",
+   "src": "Fincaraíz",
+   "url": "/apartamento-en-arriendo-en-santa-barbara-central-bogota/194357212",
+   "lat": 4.7042101,
+   "lon": -74.0538397,
+   "img": "",
+   "date": "2026-10-05",
+   "pub": "CFR Colombiana de Finca Raiz SAS",
+   "total": 3500000,
+   "dist": {
+    "casa": 2.21
+   },
+   "km": 2.21
+  },
+  {
+   "op": "arriendo",
+   "barrio": "Santa Bárbara",
+   "canon": 3178000,
+   "admin": 1022000,
+   "m2": 101.0,
+   "hab": 3,
+   "ban": 3,
+   "parq": 1,
+   "estrato": null,
+   "piso": null,
+   "asc": "nd",
+   "src": "Metrocuadrado",
+   "url": "/inmueble/arriendo-apartamento-bogota-mochuelo-norte-3-habitaciones-3-banos-1-garajes/23525-M6899163",
+   "lat": 4.693756580352783,
+   "lon": -74.03763580322266,
+   "img": "https://multimedia.metrocuadrado.com/23525-M6899163/23525-M6899163_1_x.jpg",
+   "date": null,
+   "pub": "Metrocuadrado",
+   "total": 4200000,
+   "dist": {
+    "casa": 1.76
+   },
+   "km": 1.76
+  },
+  {
+   "op": "arriendo",
+   "barrio": "Iberia",
+   "canon": 4300000,
+   "admin": null,
+   "m2": 114.0,
+   "hab": 4,
+   "ban": 3,
+   "parq": 2,
+   "estrato": null,
+   "piso": null,
+   "asc": "nd",
+   "src": "Metrocuadrado",
+   "url": "/inmueble/arriendo-apartamento-bogota-iberia-4-habitaciones-3-banos-2-garajes/20041-M6803263",
+   "lat": 4.728023529052734,
+   "lon": -74.0684814453125,
+   "img": "https://multimedia.metrocuadrado.com/20041-M6803263/20041-M6803263_2_x.jpg",
+   "date": null,
+   "pub": "Metrocuadrado",
+   "total": 4300000,
+   "dist": {
+    "casa": 4.29
+   },
+   "km": 4.29
+  },
+  {
+   "op": "arriendo",
+   "barrio": "Santa Bárbara Central",
+   "canon": 4300000,
+   "admin": null,
+   "m2": 626.0,
+   "hab": 0,
+   "ban": 2,
+   "parq": 0,
+   "inc": [
+    "hab",
+    "parq"
+   ],
+   "estrato": null,
+   "piso": null,
+   "asc": "nd",
+   "src": "Ciencuadras",
+   "url": "/inmueble/apartamento-en-arriendo-en-santa-barbara-central-bogota-3918900",
+   "lat": 4.699334,
+   "lon": -74.039718,
+   "img": "https://www-img-cc.s3.amazonaws.com/inmuebles/images/3918900/ade__179253356136_plana.jpeg",
+   "date": null,
+   "pub": "Ciencuadras",
+   "total": 4300000,
+   "dist": {
+    "casa": 1.25
+   },
+   "km": 1.25
+  },
+  {
+   "op": "arriendo",
    "barrio": "Colina Campestre",
-   "canon": 2800000,
-   "admin": 400000,
-   "m2": 103.0,
+   "canon": 3670000,
+   "admin": 653800,
+   "m2": 116.56,
+   "hab": 3,
+   "ban": 3,
+   "parq": 2,
+   "estrato": null,
+   "piso": null,
+   "asc": "nd",
+   "src": "Metrocuadrado",
+   "url": "/inmueble/arriendo-apartamento-bogota-colina-campestre-3-habitaciones-3-banos-2-garajes/5031-M6963424",
+   "lat": 4.73979,
+   "lon": -74.06941,
+   "img": "https://multimedia.metrocuadrado.com/5031-M6963424/5031-M6963424_141_x.jpg",
+   "date": null,
+   "pub": "Metrocuadrado",
+   "total": 4323800,
+   "dist": {
+    "casa": 5.12
+   },
+   "km": 5.12
+  },
+  {
+   "op": "arriendo",
+   "barrio": "Santa Bárbara Central",
+   "canon": 4500000,
+   "admin": null,
+   "m2": 110.0,
+   "hab": 0,
+   "ban": 2,
+   "parq": 0,
+   "inc": [
+    "hab",
+    "parq"
+   ],
+   "estrato": null,
+   "piso": null,
+   "asc": "nd",
+   "src": "Ciencuadras",
+   "url": "/inmueble/apartamento-en-arriendo-en-santa-barbara-central-bogota-3884218",
+   "lat": 4.695813,
+   "lon": -74.035039,
+   "img": "https://www-img-cc.s3.amazonaws.com/inmuebles/images/3884218/adde__179229422217_plana.jpeg",
+   "date": null,
+   "pub": "Ciencuadras",
+   "total": 4500000,
+   "dist": {
+    "casa": 1.5
+   },
+   "km": 1.5
+  },
+  {
+   "op": "arriendo",
+   "barrio": "Santa Bárbara Central",
+   "canon": 4600000,
+   "admin": null,
+   "m2": 110.0,
+   "hab": 0,
+   "ban": 2,
+   "parq": 0,
+   "inc": [
+    "hab",
+    "parq"
+   ],
+   "estrato": null,
+   "piso": null,
+   "asc": "nd",
+   "src": "Ciencuadras",
+   "url": "/inmueble/apartamento-en-arriendo-en-santa-barbara-central-bogota-3365611",
+   "lat": 4.69385,
+   "lon": -74.034076,
+   "img": "https://www-img-cc.s3.amazonaws.com/inmuebles/images/3365611/eac_17490611391_plana.jpeg",
+   "date": null,
+   "pub": "Ciencuadras",
+   "total": 4600000,
+   "dist": {
+    "casa": 1.72
+   },
+   "km": 1.72
+  },
+  {
+   "op": "arriendo",
+   "barrio": "Colina Campestre",
+   "canon": 4700000,
+   "admin": null,
+   "m2": 114.0,
+   "hab": 3,
+   "ban": 3,
+   "parq": 2,
+   "estrato": null,
+   "piso": null,
+   "asc": "nd",
+   "src": "Metrocuadrado",
+   "url": "/inmueble/arriendo-apartamento-bogota-el-plan-3-habitaciones-3-banos-2-garajes/MC7109897",
+   "lat": 4.7410574,
+   "lon": -74.06825,
+   "img": "https://multimedia.metrocuadrado.com/MC7109897/MC7109897_1_x.jpg",
+   "date": null,
+   "pub": "Metrocuadrado",
+   "total": 4700000,
+   "dist": {
+    "casa": 5.12
+   },
+   "km": 5.12
+  },
+  {
+   "op": "arriendo",
+   "barrio": "Santa Bárbara Central",
+   "canon": 4800000,
+   "admin": null,
+   "m2": 155.0,
+   "hab": 0,
+   "ban": 3,
+   "parq": 0,
+   "inc": [
+    "hab",
+    "parq"
+   ],
+   "estrato": null,
+   "piso": null,
+   "asc": "nd",
+   "src": "Ciencuadras",
+   "url": "/inmueble/apartamento-en-arriendo-en-santa-barbara-central-bogota-3633607",
+   "lat": 4.699623,
+   "lon": -74.041445,
+   "img": "https://www-img-cc.s3.amazonaws.com/inmuebles/images/3633607/aba__178421762718_plana.jpeg",
+   "date": null,
+   "pub": "Ciencuadras",
+   "total": 4800000,
+   "dist": {
+    "casa": 1.32
+   },
+   "km": 1.32
+  },
+  {
+   "op": "arriendo",
+   "barrio": "Santa Bárbara",
+   "canon": 5000000,
+   "admin": null,
+   "m2": 108.0,
+   "hab": 3,
+   "ban": 2,
+   "parq": 2,
+   "estrato": null,
+   "piso": null,
+   "asc": "nd",
+   "src": "Metrocuadrado",
+   "url": "/inmueble/arriendo-apartamento-bogota-san-jose-de-usaquen-3-habitaciones-2-banos-2-garajes/MC7147674",
+   "lat": 4.7511797,
+   "lon": -74.03523,
+   "img": "https://multimedia.metrocuadrado.com/MC7147674/MC7147674_12_x.jpg",
+   "date": null,
+   "pub": "Metrocuadrado",
+   "total": 5000000,
+   "dist": {
+    "casa": 4.62
+   },
+   "km": 4.62
+  },
+  {
+   "op": "arriendo",
+   "barrio": "San Patricio",
+   "canon": 5000000,
+   "admin": null,
+   "m2": 105.0,
+   "hab": 0,
+   "ban": 2,
+   "parq": 0,
+   "inc": [
+    "hab",
+    "parq"
+   ],
+   "estrato": null,
+   "piso": null,
+   "asc": "nd",
+   "src": "Ciencuadras",
+   "url": "/inmueble/apartamento-en-arriendo-en-san-patricio-bogota-3910035",
+   "lat": 4.694296,
+   "lon": -74.052156,
+   "img": "https://www-img-cc.s3.amazonaws.com/inmuebles/images/3910035/acebbafad__179191289016_plana.jpeg",
+   "date": null,
+   "pub": "Ciencuadras",
+   "total": 5000000,
+   "dist": {
+    "casa": 2.57
+   },
+   "km": 2.57
+  },
+  {
+   "op": "arriendo",
+   "barrio": "Santa Bárbara",
+   "canon": 5200000,
+   "admin": null,
+   "m2": 130.0,
    "hab": 3,
    "ban": 2,
    "parq": 1,
@@ -2636,67 +2682,17 @@
    "piso": null,
    "asc": "nd",
    "src": "Metrocuadrado",
-   "url": "/inmueble/arriendo-apartamento-bogota-cjr-versalles-reservado-3-habitaciones-2-banos-1-garajes/4058-M5433847",
-   "lat": 4.739686489105225,
-   "lon": -74.05949401855469,
-   "img": "https://multimedia.metrocuadrado.com/4058-M5433847/4058-M5433847_6_x.jpg",
-   "date": null,
-   "pub": "Metrocuadrado",
-   "total": 3200000,
-   "dist": {
-    "casa": 4.34
-   },
-   "km": 4.34
-  },
-  {
-   "op": "arriendo",
-   "barrio": "San Patricio",
-   "canon": 4200000,
-   "admin": 1000000,
-   "m2": 100.0,
-   "hab": 3,
-   "ban": 3,
-   "parq": 2,
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Metrocuadrado",
-   "url": "/inmueble/arriendo-apartamento-bogota-san-patricio-3-habitaciones-3-banos-2-garajes/851-M6802736",
-   "lat": 4.6930012702941895,
-   "lon": -74.04768371582031,
-   "img": "https://multimedia.metrocuadrado.com/851-M6802736/851-M6802736_10_x.jpg",
+   "url": "/inmueble/arriendo-apartamento-bogota-molinos-norte-edif-el-cairo-3-habitaciones-2-banos-1-garajes/MC6009224",
+   "lat": 4.6933737,
+   "lon": -74.04398,
+   "img": "https://multimedia.metrocuadrado.com/MC6009224/MC6009224_1_x.jpg",
    "date": null,
    "pub": "Metrocuadrado",
    "total": 5200000,
    "dist": {
-    "casa": 2.32
+    "casa": 2.05
    },
-   "km": 2.32
-  },
-  {
-   "op": "arriendo",
-   "barrio": "La Calleja",
-   "canon": 4500000,
-   "admin": 740000,
-   "m2": 136.0,
-   "hab": 3,
-   "ban": 3,
-   "parq": 2,
-   "estrato": null,
-   "piso": null,
-   "asc": "nd",
-   "src": "Metrocuadrado",
-   "url": "/inmueble/arriendo-apartamento-bogota-prados-de-la-calleja-3-habitaciones-3-banos-2-garajes/717-M4867316",
-   "lat": 4.7132978439331055,
-   "lon": -74.05011749267578,
-   "img": "https://multimedia.metrocuadrado.com/717-M4867316/717-M4867316_17_x.jpg",
-   "date": null,
-   "pub": "Metrocuadrado",
-   "total": 5240000,
-   "dist": {
-    "casa": 1.78
-   },
-   "km": 1.78
+   "km": 2.05
   }
  ]
 }
