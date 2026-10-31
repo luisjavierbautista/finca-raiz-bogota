@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-30",
+ "actualizado": "2026-10-31",
  "destinos": [
   {
    "clave": "gimnasio",
@@ -22,7 +22,7 @@
     5
    ],
    "hora": "08:15",
-   "salida_consultada": "2026-10-31T13:15:00Z"
+   "salida_consultada": "2026-11-07T13:15:00Z"
   },
   {
    "clave": "teatro",
@@ -33,7 +33,7 @@
     5
    ],
    "hora": "10:00",
-   "salida_consultada": "2026-10-31T15:00:00Z"
+   "salida_consultada": "2026-11-07T15:00:00Z"
   },
   {
    "clave": "colegio",
@@ -7187,6 +7187,114 @@
     "min": 46,
     "min_libre": 31,
     "km": 12.9
+   }
+  },
+  "4.7432|-74.0645": {
+   "gimnasio": {
+    "min": 24,
+    "min_libre": 22,
+    "km": 8.9
+   },
+   "musica": {
+    "min": 25,
+    "min_libre": 24,
+    "km": 10.5
+   },
+   "teatro": {
+    "min": 23,
+    "min_libre": 19,
+    "km": 8.4
+   },
+   "colegio": {
+    "min": 23,
+    "min_libre": 20,
+    "km": 9.5
+   },
+   "oficina": {
+    "min": 48,
+    "min_libre": 31,
+    "km": 13.0
+   }
+  },
+  "4.6897|-74.0601": {
+   "gimnasio": {
+    "min": 13,
+    "min_libre": 10,
+    "km": 3.6
+   },
+   "musica": {
+    "min": 8,
+    "min_libre": 8,
+    "km": 3.2
+   },
+   "teatro": {
+    "min": 2,
+    "min_libre": 2,
+    "km": 0.4
+   },
+   "colegio": {
+    "min": 27,
+    "min_libre": 24,
+    "km": 14.6
+   },
+   "oficina": {
+    "min": 28,
+    "min_libre": 24,
+    "km": 8.8
+   }
+  },
+  "4.7248|-74.0664": {
+   "gimnasio": {
+    "min": 19,
+    "min_libre": 17,
+    "km": 6.5
+   },
+   "musica": {
+    "min": 18,
+    "min_libre": 18,
+    "km": 8.0
+   },
+   "teatro": {
+    "min": 16,
+    "min_libre": 14,
+    "km": 5.6
+   },
+   "colegio": {
+    "min": 25,
+    "min_libre": 21,
+    "km": 11.8
+   },
+   "oficina": {
+    "min": 38,
+    "min_libre": 24,
+    "km": 10.4
+   }
+  },
+  "4.6980|-74.0343": {
+   "gimnasio": {
+    "min": 7,
+    "min_libre": 6,
+    "km": 2.4
+   },
+   "musica": {
+    "min": 11,
+    "min_libre": 12,
+    "km": 3.1
+   },
+   "teatro": {
+    "min": 15,
+    "min_libre": 14,
+    "km": 4.7
+   },
+   "colegio": {
+    "min": 29,
+    "min_libre": 28,
+    "km": 14.7
+   },
+   "oficina": {
+    "min": 32,
+    "min_libre": 27,
+    "km": 13.9
    }
   }
  }
