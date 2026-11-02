@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-01",
+ "actualizado": "2026-11-02",
  "destinos": [
   {
    "clave": "tiempo",
@@ -11,7 +11,7 @@
     4
    ],
    "hora": "07:30",
-   "salida_consultada": "2026-11-02T12:30:00Z"
+   "salida_consultada": "2026-11-06T12:30:00Z"
   },
   {
    "clave": "familia",
@@ -23,7 +23,7 @@
     4
    ],
    "hora": "18:00",
-   "salida_consultada": "2026-11-02T23:00:00Z"
+   "salida_consultada": "2026-11-06T23:00:00Z"
   }
  ],
  "edificios": {
@@ -13717,6 +13717,54 @@
     "min": 9,
     "min_libre": 8,
     "km": 2.3
+   }
+  },
+  "4.6143|-74.1334": {
+   "tiempo": {
+    "min": 32,
+    "min_libre": 20,
+    "km": 8.4
+   },
+   "familia": {
+    "min": 9,
+    "min_libre": 7,
+    "km": 2.0
+   }
+  },
+  "4.6705|-74.1081": {
+   "tiempo": {
+    "min": 14,
+    "min_libre": 11,
+    "km": 4.0
+   },
+   "familia": {
+    "min": 32,
+    "min_libre": 16,
+    "km": 7.3
+   }
+  },
+  "4.6624|-74.0818": {
+   "tiempo": {
+    "min": 15,
+    "min_libre": 14,
+    "km": 5.9
+   },
+   "familia": {
+    "min": 48,
+    "min_libre": 28,
+    "km": 12.5
+   }
+  },
+  "4.6815|-74.0944": {
+   "tiempo": {
+    "min": 14,
+    "min_libre": 12,
+    "km": 4.3
+   },
+   "familia": {
+    "min": 43,
+    "min_libre": 21,
+    "km": 9.4
    }
   }
  }
