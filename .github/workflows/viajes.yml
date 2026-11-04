@@ -28,7 +28,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Completar tiempos y fachadas de las dos búsquedas
+      - name: Qué búsquedas siguen vivas
+        id: vivas
+        run: echo "ids=$(python3 -c 'import sys;sys.path.insert(0,"tools");import comun;print(" ".join(comun.activas()))')" >> "$GITHUB_OUTPUT"
+
+      - name: Completar tiempos y fachadas de las búsquedas activas
         env:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
         run: |
@@ -36,7 +40,7 @@ jobs:
             echo "::warning::No hay llave en Secrets; los edificios nuevos quedan sin tiempos ni fachadas."
             exit 0
           fi
-          for b in norte occidente; do
+          for b in ${{ steps.vivas.outputs.ids }}; do
             echo "::group::$b"
             # El tope por corrida evita que un barrido con muchos edificios nuevos
             # se lleve la cuota de golpe; lo que falte se completa al día siguiente.
@@ -50,7 +54,7 @@ jobs:
           SV_EMBED_KEY: ${{ vars.SV_EMBED_KEY }}
           CARTO_KEY: ${{ vars.CARTO_KEY }}
         run: |
-          for b in norte occidente; do
+          for b in ${{ steps.vivas.outputs.ids }}; do
             python3 tools/render.py --busqueda "$b"
           done
           python3 tools/portada.py

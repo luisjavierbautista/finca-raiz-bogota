@@ -223,6 +223,10 @@
     line-height:1.5; color:var(--ink-soft); }
   .alerta-fecha b { color:var(--ink); }
   .alerta-fecha .i { color:var(--warn); font-weight:700; flex:none; }
+  .cerrada-aviso { font-family:var(--sans); font-size:13.5px; line-height:1.55; color:var(--ink-soft);
+    background:var(--surface-2); border:1px solid var(--line); border-radius:10px;
+    padding:14px 18px; margin:30px 0 0; }
+  .cerrada-aviso strong { color:var(--ink); }
   @media (max-width:640px) { .masthead { padding-top:36px; } .controls { position:static; } .grid { grid-template-columns:1fr; } }
 
   /* ---------- mapa real ---------- */
@@ -326,10 +330,10 @@
 
 <div class="wrap">
   <header class="masthead">
-    <div class="eyebrow">Búsqueda de arriendo · Bogotá norte · 3 portales · actualizado 3 nov 2026</div>
-    <h1>El 803 se entregó hace <em>21 días</em></h1>
+    <div class="eyebrow">Búsqueda cerrada el 3 de noviembre de 2026 · último barrido 3 nov 2026</div>
+    <h1>Esta búsqueda <em>se cerró</em>: nos quedamos en el 803</h1>
     <p class="deck">
-      Barrido completo de Fincaraíz, Metrocuadrado y Ciencuadras sobre tus barrios. La entrega material del apartamento actual es el <strong>13 de octubre de 2026</strong>, y el canon, la administración y los servicios deben quedar a paz y salvo hasta el <strong>12 de octubre</strong>.
+      Último barrido de Fincaraíz, Metrocuadrado y Ciencuadras el 3 nov 2026, con <strong>83 candidatos</strong> vigentes. La búsqueda terminó sin mudanza: las propietarias del 803 terminaron con la inmobiliaria y firmaron contrato directo desde el <strong>1 de noviembre de 2026</strong>, por $4.000.000 con administración incluida. La página queda como registro.
     </p>
     <ul class="criteria">
       <li>arriendo</li><li>≥ 100 m²</li><li>3+ habitaciones</li><li>≥ 1 parqueadero</li>
@@ -357,69 +361,32 @@
   </div>
 
 <section class="entrega" id="entrega">
-    <h2>La entrega del 803</h2>
+    <h2>Cómo terminó</h2>
+    <p style="font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--ink-soft);margin:14px 0 0">
+      No hubo mudanza. Las propietarias del 803 terminaron el contrato con Inmobiliaria Teleport,
+      tomaron un seguro de arrendamiento y firmaron <strong>contrato directo</strong> con nosotros:
+      doce meses desde el <strong>1 de noviembre de 2026</strong>, por <strong>$4.000.000 con
+      administración incluida</strong>. La entrega del 13 de octubre quedó sin efecto, y la lista
+      de condiciones que vivía aquí ya no aplica.
+    </p>
     <div class="fechas">
-      <div><div class="k">Vencimiento del contrato</div><div class="v">12 de octubre de 2026</div></div>
-      <div><div class="k">Entrega material</div><div class="v"><em>13 de octubre de 2026</em></div></div>
-      <div><div class="k">Preentrega</div><div class="v">por coordinar con William Rivera</div></div>
+      <div><div class="k">Contrato nuevo</div><div class="v">Nº1423, directo con las propietarias</div></div>
+      <div><div class="k">Canon</div><div class="v"><em>$4.000.000</em> admin incluida</div></div>
+      <div><div class="k">Vigencia</div><div class="v">1-nov-2026 → 1-nov-2027</div></div>
     </div>
-    <ul class="chequeo" id="chequeo">
-      <li><input type="checkbox" id="e1"><label for="e1"><b>Canon y administración a paz y salvo</b> hasta el 12 de octubre de 2026, la fecha de vencimiento del contrato.</label></li>
-      <li><input type="checkbox" id="e2"><label for="e2"><b>Servicios públicos a paz y salvo</b> hasta el 12 de octubre, incluidos los que se hayan instalado por cuenta propia.</label></li>
-      <li><input type="checkbox" id="e3"><label for="e3"><b>Copias de los servicios pagados de los últimos tres meses.</b> Con eso prorratean lo que falte por pagar, y hay que entregarlas <b>antes</b> de la entrega del inmueble.</label></li>
-      <li><input type="checkbox" id="e4"><label for="e4"><b>Agendar la visita de preentrega con William Rivera</b>, representante comercial de Teleport. Ahí se revisa el estado contra el inventario y se define la hora de la entrega.</label></li>
-      <li><input type="checkbox" id="e5"><label for="e5"><b>Inmueble en el mismo estado del inventario inicial.</b> Ese documento es el referente para el estado de conservación: paredes resanadas y pintadas del color original, y entrega conforme al inventario.</label></li>
-      <li><input type="checkbox" id="e6"><label for="e6"><b>Puerta de cocina y horno Challenger:</b> la carta deja constancia de que los instalaron nuevos, así que van a esperarlos en ese estado.</label></li>
-    </ul>
-<h3 style="font-family:var(--sans);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:26px 0 0">Los servicios, uno por uno</h3>
-    <div class="table-scroll">
-      <table class="servicios">
-        <thead>
-          <tr><th>Servicio</th><th>Facturas jul–sep</th><th>Paz y salvo</th><th>El día de la entrega</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="serv">Energía<span class="emp">Enel Colombia · mensual</span></span></td>
-            <td class="chk"><input type="checkbox" id="s-enel-f"></td>
-            <td class="chk"><input type="checkbox" id="s-enel-p"></td>
-            <td><input type="checkbox" id="s-enel-l"> <span class="det">foto del contador con la lectura</span></td>
-          </tr>
-          <tr>
-            <td><span class="serv">Acueducto y alcantarillado<span class="emp">EAAB · bimestral</span></span></td>
-            <td class="chk"><input type="checkbox" id="s-eaab-f"></td>
-            <td class="chk"><input type="checkbox" id="s-eaab-p"></td>
-            <td><input type="checkbox" id="s-eaab-l"> <span class="det">foto del contador con la lectura</span></td>
-          </tr>
-          <tr>
-            <td><span class="serv">Gas natural<span class="emp">Vanti · mensual</span></span></td>
-            <td class="chk"><input type="checkbox" id="s-vanti-f"></td>
-            <td class="chk"><input type="checkbox" id="s-vanti-p"></td>
-            <td><input type="checkbox" id="s-vanti-l"> <span class="det">foto del contador con la lectura</span></td>
-          </tr>
-          <tr>
-            <td><span class="serv">Internet<span class="emp">Movistar · lo instalaste tú</span></span></td>
-            <td class="chk"><input type="checkbox" id="s-mov-f"></td>
-            <td class="chk"><input type="checkbox" id="s-mov-p"></td>
-            <td><input type="checkbox" id="s-mov-l"> <span class="det">cancelar y devolver el módem, con soporte</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="alerta-fecha">
-      <span class="i">▲</span>
-      <span>Las facturas de <b>julio, agosto y septiembre</b> van <b>antes</b> de la entrega, no el
-      mismo día: son las que usan para calcular el prorrateo. Y las lecturas de los contadores el
-      día de la entrega son lo que te protege de ese cálculo: sin ellas, el consumo desde la última
-      factura hasta el 13 de octubre lo estiman ellos con el promedio de esos tres meses.</span>
-    </div>
-
     <p class="pie-nota">
-      Condiciones de la carta de Inmobiliaria Teleport del 21 de julio de 2026, firmada por Nancy
-      Patricia Cruz G. Las reformas hechas al inmueble quedan en pertenencia del propietario
-      (cláusula octava). Lo que marques se guarda en este navegador.
+      Para comparar, con los datos de este mismo barrido: la mediana de los apartamentos de 3+
+      habitaciones, 2+ parqueaderos y 110 m² o más estaba en $5.000.000, y solo 2 de 36 bajaban de
+      $4.000.000. Lo más barato a menos de 1,5 km del 803 pedía $4.200.000 por 110 m² y un solo
+      parqueadero.
     </p>
   </section>
+
+  <div class="cerrada-aviso">
+    Esta búsqueda está <strong>cerrada</strong>. Los datos son del último barrido, el 3 de
+    noviembre de 2026, y no se vuelven a actualizar. La que sigue corriendo a diario es la del
+    <a href="../occidente/">corredor Calle 26 · Kennedy</a>.
+  </div>
 
   <div class="controls">
     <div class="control-row">

@@ -64,7 +64,7 @@ def fecha_larga(iso):
     return "%d de %s de %d" % (d, MESES_LARGOS[m - 1], y)
 
 
-def encabezado(cfg, avisos, nuevos, caidos):
+def encabezado(cfg, avisos, nuevos, caidos, fecha=""):
     """Titular y bajada del día.
 
     Van aquí y no escritos en el HTML porque envejecen: una cuenta regresiva escrita
@@ -80,6 +80,7 @@ def encabezado(cfg, avisos, nuevos, caidos):
              else (portales[0] if portales else "ningún portal"))
 
     datos = {"n": len(avisos), "nuevos": len(nuevos), "caidos": len(caidos),
+             "fecha": fecha,
              "portales": lista,
              "arriendo": sum(1 for a in avisos if a["op"] == "arriendo"),
              "venta": sum(1 for a in avisos if a["op"] == "venta")}
@@ -452,7 +453,7 @@ def main():
                lambda _m: resumen(cfg, avisos, nuevos, caidos, fecha, es_primera),
                s, count=1, flags=re.S)
 
-    h1, deck, n_portales = encabezado(cfg, avisos, nuevos, caidos)
+    h1, deck, n_portales = encabezado(cfg, avisos, nuevos, caidos, fecha)
     if h1:
         s = re.sub(r"<h1>.*?</h1>", lambda _m: "<h1>%s</h1>" % h1, s, count=1, flags=re.S)
     if deck:

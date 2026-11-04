@@ -27,6 +27,21 @@ def cargar(argv=None):
     return cfg
 
 
+def activas():
+    """Las búsquedas que siguen corriendo, en orden alfabético.
+
+    Una búsqueda cerrada conserva su página y sus datos como registro, pero no se
+    vuelve a barrer: `activa: false` en su JSON la saca de la corrida diaria.
+    """
+    import glob
+    vivas = []
+    for f in sorted(glob.glob(os.path.join(RAIZ, "busquedas", "*.json"))):
+        d = json.load(io.open(f, encoding="utf-8"))
+        if d.get("activa", True):
+            vivas.append(d["id"])
+    return vivas
+
+
 def ruta(cfg, salida):
     p = os.path.join(RAIZ, cfg["salida"][salida])
     os.makedirs(os.path.dirname(p) or ".", exist_ok=True)

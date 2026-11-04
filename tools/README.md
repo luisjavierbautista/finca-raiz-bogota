@@ -58,6 +58,18 @@ y eyebrow). El diseño y el JavaScript de cada página se editan a mano en su HT
 **reescribe entero** en cada corrida: si solo se agregara, los párrafos viejos quedarían
 contradiciendo los datos.
 
+## Cerrar una búsqueda
+
+`"activa": false` en su JSON y queda fuera de la corrida diaria, pero conserva su página y sus
+datos. `comun.activas()` es la única fuente de verdad sobre qué se barre: el workflow la consulta
+en vez de llevar la lista escrita, y la portada baja las cerradas a un renglón de archivo con el
+motivo que diga el bloque `cerrada`.
+
+Antes de cerrarla conviene dejar la página en un estado final honesto: el titular y la bajada
+salen de `textos`, así que basta escribirlos sin cuenta regresiva y correr `render.py` una última
+vez. Si no, queda diciendo cosas como «el 803 se entregó hace 21 días» para siempre.
+
+
 ## Los que te interesan
 
 `favoritos.txt`, en la raíz, es una lista de enlaces escrita a mano. Se puede pegar la URL

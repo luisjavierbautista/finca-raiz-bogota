@@ -46,6 +46,13 @@ TARJETA = """    <a class="busqueda" href="%(carpeta)s/">
     </a>"""
 
 
+ARCHIVO = """    <a class="archivada" href="%(carpeta)s/">
+      <span class="sello">Cerrada</span>
+      <span class="qué"><b>%(titulo)s</b> — %(cierre)s</span>
+      <span class="ir">Ver el registro →</span>
+    </a>"""
+
+
 def tarjeta(nombre):
     cfg = comun.cargar(["--busqueda", nombre])
     p = os.path.join(RAIZ, cfg["salida"]["datos"])
@@ -69,30 +76,41 @@ def tarjeta(nombre):
         cifras.append("<li><b>%d</b> nuevo%s <span>en el último barrido</span></li>"
                       % (nuevos, "s" if nuevos != 1 else ""))
     datos = {
+        "cerrada": cfg.get("cerrada"),
         "carpeta": os.path.dirname(cfg["salida"]["pagina"]),
         "para": cfg["portada"]["para"],
         "titulo": cfg["portada"]["titulo"],
         "que": cfg["portada"]["que"],
         "cifras": "".join(cifras),
+        "cierre": (cfg.get("cerrada") or {}).get("motivo", ""),
     }
-    return d.get("generado", ""), TARJETA % datos
+    if cfg.get("activa", True) is False:
+        return d.get("generado", ""), None, ARCHIVO % datos
+    return d.get("generado", ""), TARJETA % datos, None
 
 
 def main():
-    fechas, tarjetas = [], []
+    fechas, tarjetas, archivadas = [], [], []
     for n in ORDEN:
-        f, html = tarjeta(n)
-        if html:
+        f, html, cerrada = tarjeta(n)
+        if html or cerrada:
             fechas.append(f)
+        if html:
             tarjetas.append(html)
+        if cerrada:
+            archivadas.append(cerrada)
     if not tarjetas:
         sys.exit("no encontré datos de ninguna búsqueda")
     fecha = fecha_larga(max(fechas))
 
-    pagina = PLANTILLA % {"tarjetas": "\n".join(tarjetas), "fecha": fecha}
+    pagina = PLANTILLA % {"tarjetas": "\n".join(tarjetas), "fecha": fecha,
+                          "archivadas": ("\n  <div class=\"archivo\">\n"
+                                         + "\n".join(archivadas) + "\n  </div>")
+                                        if archivadas else ""}
     with io.open(os.path.join(RAIZ, "index.html"), "w", encoding="utf-8") as fh:
         fh.write(pagina)
-    print("portada escrita con %d búsquedas, datos del %s" % (len(tarjetas), fecha))
+    print("portada escrita con %d búsqueda(s) viva(s) y %d archivada(s), datos del %s"
+          % (len(tarjetas), len(archivadas), fecha))
 
 
 PLANTILLA = """<!doctype html>
@@ -162,6 +180,7 @@ PLANTILLA = """<!doctype html>
   <div class="lista">
 %(tarjetas)s
   </div>
+%(archivadas)s
 
   <p class="pie">
     Datos del %(fecha)s. Lo que un aviso no publica queda como <em>sin dato</em>, nunca como cero:
