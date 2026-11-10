@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-09",
+ "actualizado": "2026-11-10",
  "destinos": [
   {
    "clave": "tiempo",
@@ -14293,6 +14293,138 @@
     "min": 45,
     "min_libre": 21,
     "km": 9.3
+   }
+  },
+  "4.6728|-74.0951": {
+   "tiempo": {
+    "min": 9,
+    "min_libre": 8,
+    "km": 2.9
+   },
+   "familia": {
+    "min": 40,
+    "min_libre": 22,
+    "km": 9.2
+   }
+  },
+  "4.6703|-74.0954": {
+   "tiempo": {
+    "min": 10,
+    "min_libre": 8,
+    "km": 3.1
+   },
+   "familia": {
+    "min": 40,
+    "min_libre": 23,
+    "km": 9.1
+   }
+  },
+  "4.6388|-74.1437": {
+   "tiempo": {
+    "min": 31,
+    "min_libre": 20,
+    "km": 8.8
+   },
+   "familia": {
+    "min": 12,
+    "min_libre": 8,
+    "km": 2.6
+   }
+  },
+  "4.6461|-74.1176": {
+   "tiempo": {
+    "min": 13,
+    "min_libre": 9,
+    "km": 3.6
+   },
+   "familia": {
+    "min": 23,
+    "min_libre": 13,
+    "km": 5.8
+   }
+  },
+  "4.6078|-74.1470": {
+   "tiempo": {
+    "min": 37,
+    "min_libre": 25,
+    "km": 10.2
+   },
+   "familia": {
+    "min": 13,
+    "min_libre": 12,
+    "km": 3.1
+   }
+  },
+  "4.6262|-74.1481": {
+   "tiempo": {
+    "min": 33,
+    "min_libre": 19,
+    "km": 8.9
+   },
+   "familia": {
+    "min": 5,
+    "min_libre": 5,
+    "km": 1.2
+   }
+  },
+  "4.6557|-74.1302": {
+   "tiempo": {
+    "min": 28,
+    "min_libre": 19,
+    "km": 8.7
+   },
+   "familia": {
+    "min": 18,
+    "min_libre": 13,
+    "km": 5.1
+   }
+  },
+  "4.6605|-74.1222": {
+   "tiempo": {
+    "min": 19,
+    "min_libre": 15,
+    "km": 5.5
+   },
+   "familia": {
+    "min": 20,
+    "min_libre": 13,
+    "km": 5.4
+   }
+  },
+  "4.6185|-74.1253": {
+   "tiempo": {
+    "min": 24,
+    "min_libre": 15,
+    "km": 6.2
+   },
+   "familia": {
+    "min": 19,
+    "min_libre": 11,
+    "km": 4.9
+   }
+  },
+  "4.6432|-74.1440": {
+   "tiempo": {
+    "min": 30,
+    "min_libre": 19,
+    "km": 8.6
+   },
+   "familia": {
+    "min": 12,
+    "min_libre": 10,
+    "km": 3.3
+   }
+  },
+  "4.6099|-74.1505": {
+   "tiempo": {
+    "min": 38,
+    "min_libre": 26,
+    "km": 10.5
+   },
+   "familia": {
+    "min": 14,
+    "min_libre": 13,
+    "km": 3.4
    }
   }
  }
